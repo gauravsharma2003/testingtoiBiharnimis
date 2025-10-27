@@ -9,28 +9,28 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #374151;
+  background: #f3f4f6;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #6B7280;
+  background: #d1d5db;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #9CA3AF;
+  background: #9ca3af;
 }
 
 /* Smooth text selection */
 ::selection {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
+  background: rgba(0, 0, 0, 0.1);
+  color: #111827;
 }
 
 /* Enhanced focus states for accessibility */
 button:focus-visible {
-  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline: 2px solid rgba(0, 0, 0, 0.3);
   outline-offset: 2px;
 }
 
@@ -48,7 +48,7 @@ button:focus-visible {
   
   /* Force text visibility */
   h3 {
-    color: white !important;
+    color: #111827 !important;
     opacity: 1 !important;
     visibility: visible !important;
     display: block !important;
