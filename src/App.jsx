@@ -52,10 +52,10 @@ function App() {
     )
   }
 
-  return <GameComponent gameData={gameDataMap[selectedGame].data} onBack={() => setSelectedGame(null)} />
+  return <GameComponent gameData={gameDataMap[selectedGame].data} candidateName={gameDataMap[selectedGame].fullName} onBack={() => setSelectedGame(null)} />
 }
 
-function GameComponent({ gameData, onBack }) {
+function GameComponent({ gameData, candidateName, onBack }) {
   const [currentNode, setCurrentNode] = useState(gameData.startNode)
   const [choiceHistory, setChoiceHistory] = useState([])
   const [gameStarted, setGameStarted] = useState(false)
@@ -101,7 +101,7 @@ function GameComponent({ gameData, onBack }) {
               </h2>
               <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed mb-6 sm:mb-8 max-w-sm sm:max-w-md lg:max-w-lg mx-auto lg:mx-0 px-2 sm:px-0">
                 Experience the final weeks of a high-stakes political campaign in Bihar. 
-                As Nitish Kumar, every decision you make will shape the outcome of the election.
+                As {candidateName}, every decision you make will shape the outcome of the election.
               </p>
             </div>
             
