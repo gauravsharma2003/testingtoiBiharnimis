@@ -34,6 +34,40 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
+/* Mobile-specific improvements */
+@media (max-width: 640px) {
+  /* Ensure better touch targets on mobile */
+  button {
+    min-height: 44px;
+  }
+  
+  /* Better spacing for small screens */
+  .material-icons {
+    line-height: 1;
+  }
+  
+  /* Force text visibility */
+  h3 {
+    color: white !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+  }
+  
+  /* Fix Material Icons sizing */
+  .material-icons {
+    font-size: 20px !important;
+    width: 20px !important;
+    height: 20px !important;
+    line-height: 20px !important;
+    flex-shrink: 0 !important;
+  }
+}
+
 /* Smooth transitions for all interactive elements */
 button, .transition-colors {
   transition: all 200ms ease-in-out;
