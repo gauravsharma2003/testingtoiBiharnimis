@@ -19,8 +19,9 @@ function App() {
 
   if (!selectedGame) {
     return (
-      <div className="w-full min-h-screen bg-white flex flex-col items-center justify-center p-4">
-        <div className="max-w-6xl w-full">
+      <div className="w-full min-h-screen bg-white flex flex-col">
+        <div className="flex-1 flex items-center justify-center p-4">
+          <div className="max-w-6xl w-full">
           <div className="text-center mb-12">
             <span className="material-icons text-gray-900 text-6xl mb-6 block">how_to_vote</span>
             <h1 className="text-5xl font-bold text-gray-900 mb-4">Bihar Election</h1>
@@ -43,8 +44,10 @@ function App() {
                 </div>
               </div>
             ))}
+            </div>
           </div>
         </div>
+        <Footer />
       </div>
     )
   }
@@ -83,7 +86,8 @@ function GameComponent({ gameData, onBack }) {
 
   if (!gameStarted) {
     return (
-      <div className="w-full min-h-screen bg-white flex flex-col lg:flex-row">
+      <div className="w-full min-h-screen bg-white flex flex-col">
+        <div className="flex-1 flex flex-col lg:flex-row">
         {/* Left Panel - Hero Content */}
         <div className="w-full lg:w-1/2 flex items-center justify-center p-4 sm:p-6 md:p-8 lg:p-16">
           <div className="max-w-2xl w-full text-center lg:text-left">
@@ -127,6 +131,8 @@ function GameComponent({ gameData, onBack }) {
             <p className="text-gray-500 mt-4 text-sm uppercase tracking-widest">Political Simulation</p>
           </div>
         </div>
+        </div>
+        <Footer />
       </div>
     )
   }
@@ -148,7 +154,7 @@ function GameComponent({ gameData, onBack }) {
     }
     
     return (
-      <div className="w-full min-h-screen bg-white">
+      <div className="w-full min-h-screen bg-white flex flex-col">
         {/* Header */}
         <header className="bg-black px-3 sm:px-4 md:px-6 lg:px-8 py-3 sm:py-4 md:py-6">
           <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
@@ -163,7 +169,7 @@ function GameComponent({ gameData, onBack }) {
         </header>
 
         {/* Main Content */}
-        <main className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 md:py-8 lg:py-12">
+        <main className="flex-1 max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 md:py-8 lg:py-12">
           {/* Result Section */}
           <div className="text-center mb-6 sm:mb-8 md:mb-12 lg:mb-16">
             <span className={`material-icons text-4xl sm:text-5xl md:text-6xl lg:text-8xl ${getResultColor(result)} mb-3 sm:mb-4 md:mb-6 block`}>
@@ -229,12 +235,13 @@ function GameComponent({ gameData, onBack }) {
             </div>
           </div>
         </main>
+        <Footer />
       </div>
     )
   }
 
   return (
-    <div className="w-full min-h-screen bg-white">
+    <div className="w-full min-h-screen bg-white flex flex-col">
       {/* Header */}
       <header className="bg-black px-3 sm:px-4 md:px-6 lg:px-8 py-3 sm:py-4 md:py-6">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
@@ -261,7 +268,7 @@ function GameComponent({ gameData, onBack }) {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 md:py-8 lg:py-12">
+      <main className="flex-1 max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 md:py-8 lg:py-12">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 xl:gap-12">
           {/* Left Panel - Scenario */}
           <div className="lg:col-span-2 order-2 lg:order-1">
@@ -324,7 +331,20 @@ function GameComponent({ gameData, onBack }) {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
+  )
+}
+
+function Footer() {
+  return (
+    <footer className="bg-gray-100 border-t border-gray-200 py-4 px-4 mt-auto">
+      <div className="max-w-7xl mx-auto text-center">
+        <p className="text-sm text-gray-600">
+          It is POC for Times of India. For feedback: <a href="mailto:gaurav.sharma4@timesinternet.in" className="text-gray-900 hover:text-gray-700 underline">gaurav.sharma4@timesinternet.in</a>
+        </p>
+      </div>
+    </footer>
   )
 }
 
