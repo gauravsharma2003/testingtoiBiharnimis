@@ -1,8 +1,58 @@
 import React, { useState } from 'react'
 import './App.css'
-import gameData from '../data.json'
+import nitishData from '../json/nitish.json'
+import bjpData from '../json/bjp.json'
+import chiragData from '../json/chirag.json'
+import prashantData from '../json/prashant.json'
+import tejashwiData from '../json/tejashwi.json'
+
+const gameDataMap = {
+  nitish: { data: nitishData, fullName: "Nitish Kumar" },
+  bjp: { data: bjpData, fullName: "BJP" },
+  chirag: { data: chiragData, fullName: "Chirag Paswan" },
+  prashant: { data: prashantData, fullName: "Prashant Kishor" },
+  tejashwi: { data: tejashwiData, fullName: "Tejashwi Yadav" }
+}
 
 function App() {
+  const [selectedGame, setSelectedGame] = useState(null)
+
+  if (!selectedGame) {
+    return (
+      <div className="w-full min-h-screen bg-white flex flex-col items-center justify-center p-4">
+        <div className="max-w-6xl w-full">
+          <div className="text-center mb-12">
+            <span className="material-icons text-gray-900 text-6xl mb-6 block">how_to_vote</span>
+            <h1 className="text-5xl font-bold text-gray-900 mb-4">Bihar Election</h1>
+            <h2 className="text-2xl text-gray-700 mb-6">Choose Your Perspective</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Experience the final weeks of Bihar's high-stakes political campaign from different viewpoints. 
+              Each perspective offers a unique journey through the complex world of Indian politics.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {Object.entries(gameDataMap).map(([key, gameInfo]) => (
+              <div key={key} className="bg-gray-100 rounded-xl p-6 hover:bg-gray-200 transition-colors cursor-pointer" onClick={() => setSelectedGame(key)}>
+                <div className="text-center">
+                  <span className="material-icons text-gray-900 text-4xl mb-4 block">person</span>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-6">{gameInfo.fullName}</h3>
+                  <button className="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+                    Start Campaign
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  return <GameComponent gameData={gameDataMap[selectedGame].data} onBack={() => setSelectedGame(null)} />
+}
+
+function GameComponent({ gameData, onBack }) {
   const [currentNode, setCurrentNode] = useState(gameData.startNode)
   const [choiceHistory, setChoiceHistory] = useState([])
   const [gameStarted, setGameStarted] = useState(false)
@@ -51,13 +101,22 @@ function App() {
               </p>
             </div>
             
-            <button 
-              className="bg-white text-black px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-lg font-semibold text-sm sm:text-base md:text-lg hover:bg-gray-100 transition-colors duration-200 flex items-center gap-2 sm:gap-3 mx-auto lg:mx-0 w-auto min-w-[140px] sm:min-w-[160px]"
-              onClick={startGame}
-            >
-              <span className="material-icons text-sm sm:text-base">play_arrow</span>
-              Begin Campaign
-            </button>
+            <div className="flex gap-4 justify-center lg:justify-start">
+              <button 
+                className="bg-gray-100 text-black px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-lg font-semibold text-sm sm:text-base md:text-lg hover:bg-gray-300 transition-colors duration-200 flex items-center gap-2 sm:gap-3"
+                onClick={onBack}
+              >
+                <span className="material-icons text-sm sm:text-base">arrow_back</span>
+                Back
+              </button>
+              <button 
+                className="bg-zinc-300  text-black px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-lg font-semibold text-sm sm:text-base md:text-lg hover:bg-gray-100 transition-colors duration-200 flex items-center gap-2 sm:gap-3 w-auto min-w-[140px] sm:min-w-[160px]"
+                onClick={startGame}
+              >
+                <span className="material-icons text-sm sm:text-base">play_arrow</span>
+                Begin Campaign
+              </button>
+            </div>
           </div>
         </div>
         
@@ -83,21 +142,21 @@ function App() {
     }
     
     const getResultColor = (result) => {
-      if (result.includes('VICTORY')) return 'text-green-400'
-      if (result.includes('DEFEAT')) return 'text-red-400'
-      return 'text-yellow-400'
+      if (result.includes('VICTORY')) return 'text-black'
+      if (result.includes('DEFEAT')) return 'text-gray-600'
+      return 'text-gray-800'
     }
     
     return (
       <div className="w-full min-h-screen bg-white">
         {/* Header */}
-        <header className="bg-gray-100 px-3 sm:px-4 md:px-6 lg:px-8 py-3 sm:py-4 md:py-6">
+        <header className="bg-black px-3 sm:px-4 md:px-6 lg:px-8 py-3 sm:py-4 md:py-6">
           <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
             <div className="flex items-center gap-2 sm:gap-3">
-              <span className="material-icons text-gray-900 text-lg sm:text-xl md:text-2xl">how_to_vote</span>
-              <h1 className="text-base sm:text-lg md:text-xl font-semibold text-gray-900">Bihar Election</h1>
+              <span className="material-icons text-white text-lg sm:text-xl md:text-2xl">how_to_vote</span>
+              <h1 className="text-base sm:text-lg md:text-xl font-semibold text-white">Bihar Election</h1>
             </div>
-            <div className="w-full sm:w-48 md:w-56 lg:w-64 bg-gray-200 rounded-full h-2">
+            <div className="w-full sm:w-48 md:w-56 lg:w-64 bg-gray-700 rounded-full h-2">
               <div className="bg-white h-2 rounded-full w-full"></div>
             </div>
           </div>
@@ -121,28 +180,28 @@ function App() {
           {/* Content Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 xl:gap-12 mb-6 sm:mb-8 lg:mb-12">
             {/* Campaign Summary */}
-            <div className="bg-gray-100 rounded-xl p-3 sm:p-4 md:p-6 lg:p-8">
+            <div className="bg-white border border-gray-200 rounded-xl p-3 sm:p-4 md:p-6 lg:p-8">
               <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4 md:mb-6">
-                <span className="material-icons text-gray-900 text-lg sm:text-xl md:text-2xl">summarize</span>
-                <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-gray-900">Campaign Summary</h3>
+                <span className="material-icons text-black text-lg sm:text-xl md:text-2xl">summarize</span>
+                <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-black">Campaign Summary</h3>
               </div>
               <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed">{node.summary}</p>
             </div>
 
             {/* Statistics */}
             {node.stats && (
-              <div className="bg-gray-100 rounded-xl p-3 sm:p-4 md:p-6 lg:p-8">
+              <div className="bg-white border border-gray-200 rounded-xl p-3 sm:p-4 md:p-6 lg:p-8">
                 <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4 md:mb-6">
-                  <span className="material-icons text-gray-900 text-lg sm:text-xl md:text-2xl">analytics</span>
-                  <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-gray-900">Final Statistics</h3>
+                  <span className="material-icons text-black text-lg sm:text-xl md:text-2xl">analytics</span>
+                  <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-black">Final Statistics</h3>
                 </div>
                 <div className="space-y-2 sm:space-y-3 md:space-y-4">
                   {Object.entries(node.stats).map(([key, value]) => (
-                    <div key={key} className="flex justify-between items-center p-2 sm:p-3 md:p-4 bg-gray-200 rounded-lg">
+                    <div key={key} className="flex justify-between items-center p-2 sm:p-3 md:p-4 bg-gray-50 border border-gray-200 rounded-lg">
                       <span className="text-xs sm:text-sm text-gray-600 font-medium">
                         {key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
                       </span>
-                      <span className="text-xs sm:text-sm md:text-base text-gray-900 font-semibold">{value}</span>
+                      <span className="text-xs sm:text-sm md:text-base text-black font-semibold">{value}</span>
                     </div>
                   ))}
                 </div>
@@ -152,13 +211,22 @@ function App() {
 
           {/* Actions */}
           <div className="text-center">
-            <button 
-              className="bg-white text-black px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-lg font-semibold text-sm sm:text-base md:text-lg hover:bg-gray-100 transition-colors duration-200 flex items-center gap-2 sm:gap-3 mx-auto min-w-[120px] sm:min-w-[140px]"
-              onClick={restartGame}
-            >
-              <span className="material-icons text-sm sm:text-base">refresh</span>
-              Play Again
-            </button>
+            <div className="flex gap-4 justify-center">
+              <button 
+                className="bg-gray-200 text-black px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-lg font-semibold text-sm sm:text-base md:text-lg hover:bg-gray-300 transition-colors duration-200 flex items-center gap-2 sm:gap-3"
+                onClick={onBack}
+              >
+                <span className="material-icons text-sm sm:text-base">arrow_back</span>
+                Back to Menu
+              </button>
+              <button 
+                className="bg-white text-black px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-lg font-semibold text-sm sm:text-base md:text-lg hover:bg-gray-100 transition-colors duration-200 flex items-center gap-2 sm:gap-3 min-w-[120px] sm:min-w-[140px]"
+                onClick={restartGame}
+              >
+                <span className="material-icons text-sm sm:text-base">refresh</span>
+                Play Again
+              </button>
+            </div>
           </div>
         </main>
       </div>
@@ -168,15 +236,21 @@ function App() {
   return (
     <div className="w-full min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-gray-100 px-3 sm:px-4 md:px-6 lg:px-8 py-3 sm:py-4 md:py-6">
+      <header className="bg-black px-3 sm:px-4 md:px-6 lg:px-8 py-3 sm:py-4 md:py-6">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
           <div className="flex items-center gap-2 sm:gap-3">
-            <span className="material-icons text-gray-900 text-lg sm:text-xl md:text-2xl">how_to_vote</span>
-            <h1 className="text-base sm:text-lg md:text-xl font-semibold text-gray-900">Bihar Election</h1>
+            <button 
+              onClick={onBack}
+              className="flex items-center gap-1 text-gray-400 hover:text-white transition-colors"
+            >
+              <span className="material-icons text-lg">arrow_back</span>
+            </button>
+            <span className="material-icons text-white text-lg sm:text-xl md:text-2xl">how_to_vote</span>
+            <h1 className="text-base sm:text-lg md:text-xl font-semibold text-white">Bihar Election</h1>
           </div>
           <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 md:gap-4 w-full sm:w-auto">
-            <span className="text-gray-600 text-xs sm:text-sm">Decision {choiceHistory.length + 1}</span>
-            <div className="w-full sm:w-40 md:w-48 lg:w-64 bg-gray-200 rounded-full h-2">
+            <span className="text-gray-400 text-xs sm:text-sm">Decision {choiceHistory.length + 1}</span>
+            <div className="w-full sm:w-40 md:w-48 lg:w-64 bg-gray-700 rounded-full h-2">
               <div 
                 className="bg-white h-2 rounded-full transition-all duration-500" 
                 style={{ width: `${progress}%` }}
@@ -191,11 +265,11 @@ function App() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 xl:gap-12">
           {/* Left Panel - Scenario */}
           <div className="lg:col-span-2 order-2 lg:order-1">
-            <div className="bg-gray-100 rounded-xl p-3 sm:p-4 md:p-6 lg:p-8 mb-4 sm:mb-6 lg:mb-8">
+            <div className="bg-white border border-gray-200 rounded-xl p-3 sm:p-4 md:p-6 lg:p-8 mb-4 sm:mb-6 lg:mb-8">
               <div className="flex items-start gap-2 sm:gap-3 md:gap-4 mb-3 sm:mb-4 md:mb-6">
-                <span className="material-icons text-gray-900 text-lg sm:text-xl md:text-2xl mt-1">description</span>
+                <span className="material-icons text-black text-lg sm:text-xl md:text-2xl mt-1">description</span>
                 <div>
-                  <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-gray-900 mb-2 sm:mb-3 md:mb-4">Current Situation</h2>
+                  <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-black mb-2 sm:mb-3 md:mb-4">Current Situation</h2>
                   <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed">
                     {node.text}
                   </p>
@@ -205,26 +279,26 @@ function App() {
 
             {/* Choices */}
             <div className="space-y-2 sm:space-y-3 md:space-y-4">
-              <div className="bg-gray-200 p-3 sm:p-4 rounded-lg mb-4 sm:mb-6">
+              <div className="bg-black p-3 sm:p-4 rounded-lg mb-4 sm:mb-6">
                 <div className="flex items-center gap-2">
-                  <span className="material-icons flex-shrink-0" style={{ color: 'white', fontSize: '20px', width: '20px', height: '20px', lineHeight: '20px' }}>decision_tree</span>
-                  <h3 className="font-semibold flex-1" style={{ color: 'white', fontSize: '16px', margin: '0', padding: '0', display: 'block' }}>Your Options</h3>
+                  <span className="material-icons text-white text-lg">decision_tree</span>
+                  <h3 className="font-semibold text-white text-base">Your Options</h3>
                 </div>
               </div>
               {node.options?.map((option, index) => (
                 <button
                   key={index}
-                  className="w-full bg-gray-100 hover:bg-zinc-600 text-gray-900 p-3 sm:p-4 md:p-5 lg:p-6 rounded-xl text-left transition-all duration-200 relative opacity-90 hover:opacity-100 active:top-1 shadow-[0_7px_2px_0_rgb(63,63,70),0_8px_5px_0_rgba(0,0,0,0.3)] active:shadow-[0_3px_2px_0_rgb(63,63,70),0_3px_5px_0_rgba(0,0,0,0.3)]"
+                  className="w-full bg-white border-2 border-gray-200 hover:border-black hover:bg-gray-50 text-black p-3 sm:p-4 md:p-5 lg:p-6 rounded-xl text-left transition-all duration-200 group"
                   onClick={() => makeChoice(option.nextNode, option.text)}
                 >
                   <div className="flex items-start gap-2 sm:gap-3 md:gap-4">
-                    <div className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-white text-zinc-700 rounded-full flex items-center justify-center font-bold text-xs sm:text-sm md:text-base shadow-md">
+                    <div className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-black text-white rounded-full flex items-center justify-center font-bold text-xs sm:text-sm md:text-base">
                       {index + 1}
                     </div>
-                    <p className="text-xs sm:text-sm md:text-base text-gray-900 leading-relaxed font-medium text-left normal-case tracking-normal flex-1">{option.text}</p>
+                    <p className="text-xs sm:text-sm md:text-base text-black leading-relaxed font-medium text-left normal-case tracking-normal flex-1">{option.text}</p>
                   </div>
                   <div className="mt-2 sm:mt-3 flex items-center justify-end">
-                    <span className="material-icons text-zinc-400 text-base sm:text-lg">arrow_forward_ios</span>
+                    <span className="material-icons text-gray-400 group-hover:text-black text-base sm:text-lg transition-colors">arrow_forward_ios</span>
                   </div>
                 </button>
               ))}
@@ -233,15 +307,15 @@ function App() {
 
           {/* Right Panel - Progress */}
           <div className="order-1 lg:order-2">
-            <div className="bg-gray-100 rounded-xl p-3 sm:p-4 md:p-6">
+            <div className="bg-white border border-gray-200 rounded-xl p-3 sm:p-4 md:p-6">
               <div className="space-y-2 sm:space-y-3 md:space-y-4">
                 <div className="flex justify-between items-center">
                   <span className="text-xs sm:text-sm md:text-base text-gray-600">Campaign Progress</span>
-                  <span className="text-xs sm:text-sm md:text-base text-gray-900 font-semibold">{choiceHistory.length}/5</span>
+                  <span className="text-xs sm:text-sm md:text-base text-black font-semibold">{choiceHistory.length}/5</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2">
                   <div 
-                    className="bg-white h-2 rounded-full transition-all duration-500" 
+                    className="bg-black h-2 rounded-full transition-all duration-500" 
                     style={{ width: `${progress}%` }}
                   ></div>
                 </div>

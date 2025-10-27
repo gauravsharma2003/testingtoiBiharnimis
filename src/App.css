@@ -46,8 +46,8 @@ button:focus-visible {
     line-height: 1;
   }
   
-  /* Force text visibility */
-  h3 {
+  /* Force text visibility for most h3 elements */
+  h3:not(.text-white) {
     color: #111827 !important;
     opacity: 1 !important;
     visibility: visible !important;
