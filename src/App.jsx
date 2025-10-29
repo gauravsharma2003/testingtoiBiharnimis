@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './App.css'
 import nitishData from '../json/nitish.json'
 import bjpData from '../json/bjp.json'
@@ -17,6 +17,16 @@ const gameDataMap = {
 function App() {
   const [selectedGame, setSelectedGame] = useState(null)
 
+  const handleCharacterSelect = (key, fullName) => {
+    // Track character selection
+    const eventData = { character_name: fullName }
+    console.log('GA Event: character_select', eventData)
+    if (window.gtag) {
+      window.gtag('event', 'character_select', eventData)
+    }
+    setSelectedGame(key)
+  }
+
   if (!selectedGame) {
     return (
       <div className="w-full min-h-screen bg-white flex flex-col">
@@ -34,7 +44,7 @@ function App() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {Object.entries(gameDataMap).map(([key, gameInfo]) => (
-              <div key={key} className="bg-gray-100 rounded-xl p-6 hover:bg-gray-200 transition-colors cursor-pointer" onClick={() => setSelectedGame(key)}>
+              <div key={key} className="bg-gray-100 rounded-xl p-6 hover:bg-gray-200 transition-colors cursor-pointer" onClick={() => handleCharacterSelect(key, gameInfo.fullName)}>
                 <div className="text-center">
                   <span className="material-icons text-gray-900 text-4xl mb-4 block">person</span>
                   <h3 className="text-xl font-semibold text-gray-900 mb-6">{gameInfo.fullName}</h3>
@@ -59,10 +69,26 @@ function GameComponent({ gameData, candidateName, onBack }) {
   const [currentNode, setCurrentNode] = useState(gameData.startNode)
   const [choiceHistory, setChoiceHistory] = useState([])
   const [gameStarted, setGameStarted] = useState(false)
+  const [startTime, setStartTime] = useState(null)
 
   const getCurrentNodeData = () => gameData.nodes[currentNode]
 
   const makeChoice = (nextNode, choiceText) => {
+    const decisionNumber = choiceHistory.length + 1
+    
+    // Track decision/choice
+    const eventData = {
+      character_name: candidateName,
+      decision_number: decisionNumber,
+      node_id: currentNode,
+      choice_text: choiceText,
+      next_node_id: nextNode
+    }
+    console.log('GA Event: make_choice', eventData)
+    if (window.gtag) {
+      window.gtag('event', 'make_choice', eventData)
+    }
+    
     setChoiceHistory(prev => [...prev, {
       from: currentNode,
       choice: choiceText,
@@ -75,14 +101,46 @@ function GameComponent({ gameData, candidateName, onBack }) {
     setCurrentNode(gameData.startNode)
     setChoiceHistory([])
     setGameStarted(false)
+    setStartTime(null)
   }
 
   const startGame = () => {
+    setStartTime(Date.now())
+    
+    // Track game start
+    const eventData = { character_name: candidateName }
+    console.log('GA Event: game_start', eventData)
+    if (window.gtag) {
+      window.gtag('event', 'game_start', eventData)
+    }
+    
     setGameStarted(true)
   }
 
   const node = getCurrentNodeData()
   const progress = Math.min((choiceHistory.length / 5) * 100, 100)
+
+  // Track game completion
+  useEffect(() => {
+    if (node?.isEnding && startTime) {
+      const duration = Math.round((Date.now() - startTime) / 1000)
+      const resultMatch = node.text.match(/^[A-Z !]+/)
+      const resultType = resultMatch ? resultMatch[0].trim() : 'UNKNOWN'
+
+      const eventData = {
+        character_name: candidateName,
+        result_type: resultType,
+        ending_id: currentNode,
+        final_public_approval: node.stats?.publicApproval,
+        play_duration_seconds: duration
+      }
+
+      console.log('GA Event: game_complete', eventData)
+      if (window.gtag) {
+        window.gtag('event', 'game_complete', eventData)
+      }
+    }
+  }, [node, candidateName, currentNode, startTime])
 
   if (!gameStarted) {
     return (
