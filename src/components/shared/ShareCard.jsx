@@ -92,7 +92,7 @@ const ShareCard = ({ nodeData, candidateKey }) => {
       {/* Header Image */}
       <div className="w-full">
         <img 
-          src="/election_header.jpeg" 
+          src="https://testingtoi-simulationroom.vercel.app/election_header.jpeg" 
           alt="Bihar Election Header"
           style={{ width: '100%', height: 'auto', display: 'block' }}
         />
@@ -137,7 +137,7 @@ const ShareCard = ({ nodeData, candidateKey }) => {
       {/* Banner Image */}
       <div className="w-full">
         <img 
-          src="/election_banner.jpeg" 
+          src="https://testingtoi-simulationroom.vercel.app/election_banner.jpeg" 
           alt="Bihar Election Banner"
           className="w-full h-auto"
           crossOrigin="anonymous"
