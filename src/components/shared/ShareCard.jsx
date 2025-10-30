@@ -14,7 +14,7 @@ const ShareCard = ({ nodeData, candidateKey }) => {
     // Prevent multiple shares
     if (hasSharedRef.current || isSharing) return
     
-    // Automatically trigger share when component mounts
+    // Automatically trigger share when component mount
     const shareCard = async () => {
       hasSharedRef.current = true
       setIsSharing(true)
