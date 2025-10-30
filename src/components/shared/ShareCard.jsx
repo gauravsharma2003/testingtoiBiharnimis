@@ -108,20 +108,20 @@ const ShareCard = ({ nodeData, candidateKey }) => {
         </p>
       </div>
 
-      {/* Final Statistics */}
+            {/* Final Statistics */}
       {nodeData.stats && (
-        <div className="w-10/12 mx-auto py-4 flex justify-center" style={{ backgroundColor: '#f9fafb' }}>
-          <div style={{ width: '80%' }}>
-            <h4 className="text-lg font-bold mb-3 flex items-center gap-2" style={{ color: '#111827' }}>
-              <span className="material-icons text-base">analytics</span>
+        <div className="py-4 flex justify-center" style={{ backgroundColor: '#f9fafb' }}>
+          <div style={{ width: '85%' }}>
+            <h4 className="text-base font-bold mb-5 flex items-center gap-2" style={{ color: '#111827' }}>
+              <span className="material-icons text-sm">analytics</span>
               Final Statistics
             </h4>
             <div className="space-y-2">
               {Object.entries(nodeData.stats).map(([key, value]) => (
                 <div 
                   key={key} 
-                  className="flex justify-between items-center p-2 rounded-lg"
-                  style={{ backgroundColor: '#ffffff', border: '1px solid #e5e7eb' }}
+                  className="flex justify-between items-center rounded-lg mb-2"
+                  style={{ backgroundColor: '#ffffff', border: '1px solid #e5e7eb', padding: '6px 8px' }}
                 >
                   <span className="text-xs font-medium" style={{ color: '#4b5563' }}>
                     {key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
@@ -142,13 +142,6 @@ const ShareCard = ({ nodeData, candidateKey }) => {
           className="w-full h-auto"
           crossOrigin="anonymous"
         />
-      </div>
-
-      {/* Call to Action */}
-      <div className="px-6 py-4 text-center" style={{ backgroundColor: '#ffffff' }}>
-        <p className="text-sm font-medium" style={{ color: '#374151' }}>
-          Play the Bihar Election Simulation and test your political strategy!
-        </p>
       </div>
     </div>
   )
