@@ -10,25 +10,25 @@ const gameDataMap = {
   nitish: { 
     data: nitishData, 
     fullName: "Nitish Kumar",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop&face=auto",
+    image: "https://cimp.ac.in/wp-content/uploads/2024/06/CM-Nitish-Kumar-1.png",
     subhead: "Chief Minister & Political Veteran"
   },
   chirag: { 
     data: chiragData, 
     fullName: "Chirag Paswan",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=300&fit=crop&face=auto",
+    image: "https://www.livemint.com/lm-img/img/2025/07/12/original/Chirag-Paswan-9_1752283432064_1752283458020.jpg",
     subhead: "Young Leader & Alliance Builder"
   },
   prashant: { 
     data: prashantData, 
     fullName: "Prashant Kishor",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=300&fit=crop&face=auto",
+    image: "https://pnglove.com/data/img/1142_pMyO.jpg",
     subhead: "Political Strategist & Reformer"
   },
   tejashwi: { 
     data: tejashwiData, 
     fullName: "Tejashwi Yadav",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=300&fit=crop&face=auto",
+    image: "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202112/5-l-Tejashwi.jpg?size=690:388",
     subhead: "Deputy CM & Youth Icon"
   }
 }
