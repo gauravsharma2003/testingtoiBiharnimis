@@ -13,7 +13,7 @@ function App() {
       try {
         const [nitishData, chiragData, prashantData, tejashwiData] = await Promise.all([
           fetch(`${JSON_BASE_URL}/nitish.json`).then(res => res.json()),
-          fetch(`${JSON_BASE_URL}/chirag.json`).then(res => res.json()),
+          // fetch(`${JSON_BASE_URL}/chirag.json`).then(res => res.json()),
           fetch(`${JSON_BASE_URL}/prashant.json`).then(res => res.json()),
           fetch(`${JSON_BASE_URL}/tejashwi.json`).then(res => res.json())
         ])
