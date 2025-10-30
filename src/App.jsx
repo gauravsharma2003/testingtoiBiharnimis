@@ -1,40 +1,58 @@
 import React, { useState, useEffect } from 'react'
 import './App.css'
-import nitishData from '../json/nitish.json'
-// import bjpData from '../json/bjp.json'
-import chiragData from '../json/chirag.json'
-import prashantData from '../json/prashant.json'
-import tejashwiData from '../json/tejashwi.json'
 
-const gameDataMap = {
-  nitish: { 
-    data: nitishData, 
-    fullName: "Nitish Kumar (NDA)",
-    image: "https://cimp.ac.in/wp-content/uploads/2024/06/CM-Nitish-Kumar-1.png",
-    subhead: "Chief Minister & Political Veteran"
-  },
-  // chirag: { 
-  //   data: chiragData, 
-  //   fullName: "Chirag Paswan",
-  //   image: "https://www.livemint.com/lm-img/img/2025/07/12/original/Chirag-Paswan-9_1752283432064_1752283458020.jpg",
-  //   subhead: "Young Leader & Alliance Builder"
-  // },
-  prashant: { 
-    data: prashantData, 
-    fullName: "Prashant Kishor (JS)",
-    image: "https://pnglove.com/data/img/1142_pMyO.jpg",
-    subhead: "Political Strategist & Reformer"
-  },
-  tejashwi: { 
-    data: tejashwiData, 
-    fullName: "Tejashwi Yadav (MG)",
-    image: "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202112/5-l-Tejashwi.jpg?size=690:388",
-    subhead: "Deputy CM & Youth Icon"
-  }
-}
+const JSON_BASE_URL = 'https://testingtoi-simulationroom.vercel.app/json'
 
 function App() {
   const [selectedGame, setSelectedGame] = useState(null)
+  const [gameDataMap, setGameDataMap] = useState(null)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const loadGameData = async () => {
+      try {
+        const [nitishData, chiragData, prashantData, tejashwiData] = await Promise.all([
+          fetch(`${JSON_BASE_URL}/nitish.json`).then(res => res.json()),
+          fetch(`${JSON_BASE_URL}/chirag.json`).then(res => res.json()),
+          fetch(`${JSON_BASE_URL}/prashant.json`).then(res => res.json()),
+          fetch(`${JSON_BASE_URL}/tejashwi.json`).then(res => res.json())
+        ])
+
+        setGameDataMap({
+          nitish: { 
+            data: nitishData, 
+            fullName: "Nitish Kumar (NDA)",
+            image: "https://cimp.ac.in/wp-content/uploads/2024/06/CM-Nitish-Kumar-1.png",
+            subhead: "Chief Minister & Political Veteran"
+          },
+          // chirag: { 
+          //   data: chiragData, 
+          //   fullName: "Chirag Paswan",
+          //   image: "https://www.livemint.com/lm-img/img/2025/07/12/original/Chirag-Paswan-9_1752283432064_1752283458020.jpg",
+          //   subhead: "Young Leader & Alliance Builder"
+          // },
+          prashant: { 
+            data: prashantData, 
+            fullName: "Prashant Kishor (JS)",
+            image: "https://pnglove.com/data/img/1142_pMyO.jpg",
+            subhead: "Political Strategist & Reformer"
+          },
+          tejashwi: { 
+            data: tejashwiData, 
+            fullName: "Tejashwi Yadav (MG)",
+            image: "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202112/5-l-Tejashwi.jpg?size=690:388",
+            subhead: "Deputy CM & Youth Icon"
+          }
+        })
+        setLoading(false)
+      } catch (error) {
+        console.error('Error loading game data:', error)
+        setLoading(false)
+      }
+    }
+
+    loadGameData()
+  }, [])
 
   const handleCharacterSelect = (key, fullName) => {
     // Track character selection
@@ -44,6 +62,28 @@ function App() {
       window.gtag('event', 'character_select', eventData)
     }
     setSelectedGame(key)
+  }
+
+  if (loading) {
+    return (
+      <div className="w-full min-h-screen bg-white flex items-center justify-center">
+        <div className="text-center">
+          <span className="material-icons text-gray-900 text-6xl mb-4 block animate-spin">refresh</span>
+          <p className="text-lg text-gray-600">Loading campaign data...</p>
+        </div>
+      </div>
+    )
+  }
+
+  if (!gameDataMap) {
+    return (
+      <div className="w-full min-h-screen bg-white flex items-center justify-center">
+        <div className="text-center">
+          <span className="material-icons text-red-500 text-6xl mb-4 block">error</span>
+          <p className="text-lg text-gray-600">Failed to load campaign data</p>
+        </div>
+      </div>
+    )
   }
 
   if (!selectedGame) {

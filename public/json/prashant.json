@@ -1,0 +1,776 @@
+{
+  "name": "Bihar Election: The Final Countdown",
+  "startNode": "q1_opening_gambit",
+  "nodes": {
+    "q1_opening_gambit": {
+      "text": "The final weeks are here. Polls show a dead heat. As Prashant Kishor, you must set the campaign's core narrative. Do you focus on breaking traditional molds or consolidating a new, focused base?",
+      "options": [
+        {
+          "text": "Launch a broad-based 'Naya Bihar' campaign focused on good governance, youth unemployment, and economic development, challenging both NDA and INDIA blocs.",
+          "nextNode": "q2_media_expose"
+        },
+        {
+          "text": "Double down on the 'clean politics' message. Vow to root out corruption and expose the criminal links of established politicians, positioning Jan Suraaj as the only principled choice.",
+          "nextNode": "q2_rival_gaffe"
+        },
+        {
+          "text": "Focus on mobilizing specific, neglected communities like agricultural and migrant workers with promises of targeted subsidies and social security.",
+          "nextNode": "q2_farmer_protest"
+        }
+      ]
+    },
+    "q2_media_expose": {
+      "text": "A massive corruption scandal in the NDA's agricultural subsidy program is front-page news. This is a golden opportunity to attack the government's core 'governance' plank. How do you leverage this?",
+      "options": [
+        {
+          "text": "Hold a press conference with affected farmers, presenting evidence and promising a full investigation.",
+          "nextNode": "q3_resource_crunch"
+        },
+        {
+          "text": "Launch an aggressive social media campaign with AI-generated videos mocking the Chief Minister, aiming for virality.",
+          "nextNode": "q3_internal_dissent"
+        },
+        {
+          "text": "Quietly use the scandal to pressure local NDA leaders, offering them a clean slate for their covert support.",
+          "nextNode": "q3_nda_implosion"
+        }
+      ]
+    },
+    "q2_rival_gaffe": {
+      "text": "A huge opportunity! The RJD leader, Tejashwi Yadav, dismissively refers to the concerns of migrant laborers as 'unimportant' on a hot mic. How do you capitalize on this?",
+      "options": [
+        {
+          "text": "Amplify the clip across all platforms, contrasting it with your detailed plan for migrant welfare.",
+          "nextNode": "q3_funding_offer"
+        },
+        {
+          "text": "Organize a 'Migrant Samman Yatra' across the state, led by family members of migrant workers, to create a powerful, emotional narrative against the RJD.",
+          "nextNode": "q3_media_blackout"
+        }
+      ]
+    },
+    "q2_farmer_protest": {
+      "text": "A spontaneous sugarcane farmers' protest over delayed payments has paralyzed the Tirhut region. This is your core demographic, and they're looking for a leader. How do you intervene?",
+      "options": [
+        {
+          "text": "Immediately travel to the protest site. Sit with the farmers and refuse to leave until their demands are met, becoming the face of their struggle.",
+          "nextNode": "q3_coalition_pressure"
+        },
+        {
+          "text": "Use your network to expand the protest to other agricultural sectors, turning it into a statewide agitation.",
+          "nextNode": "q3_radical_demands"
+        },
+        {
+          "text": "Stay in Patna but issue a detailed policy paper on agricultural reforms, promising guaranteed MSP and debt relief.",
+          "nextNode": "q3_intellectual_appeal"
+        }
+      ]
+    },
+    "q3_resource_crunch": {
+      "text": "Your anti-corruption stance is popular, but campaign coffers are low. A faction of your 'primary-selected' candidates is now publicly demanding more funds for local campaigns. What's your move?",
+      "options": [
+        {
+          "text": "Divert remaining central funds to these candidates to quell the rebellion, cutting statewide advertising.",
+          "nextNode": "q4_debate_development"
+        },
+        {
+          "text": "Hold a firm line. Publicly state all candidates must work within their budgets, risking internal revolt.",
+          "nextNode": "q4_rally_discipline"
+        }
+      ]
+    },
+    "q3_internal_dissent": {
+      "text": "Your viral video campaign is a sensation, but the party's old guard is appalled by the 'negative' tone. They threaten to withdraw grassroots support. How do you handle this dissent?",
+      "options": [
+        {
+          "text": "Apologize for the tone, pull the controversial videos, and refocus on policy speeches.",
+          "nextNode": "q4_interview_policy"
+        },
+        {
+          "text": "Ignore the dissenters and double down, believing the youth vote is more critical.",
+          "nextNode": "q4_debate_attack"
+        }
+      ]
+    },
+    "q3_nda_implosion": {
+      "text": "Your gambit paid off. Several NDA leaders are ready to secretly support you. They demand a guarantee of no future corruption investigations and a large sum of cash. Do you strike this risky deal?",
+      "options": [
+        {
+          "text": "Agree to their terms. It's a pragmatic path to victory but compromises your core message.",
+          "nextNode": "q4_rally_compromise"
+        },
+        {
+          "text": "Refuse the deal. Your 'clean politics' image is non-negotiable, even if it means losing their support.",
+          "nextNode": "q4_interview_principles"
+        }
+      ]
+    },
+    "q3_funding_offer": {
+      "text": "Your campaign against the RJD is working. A consortium of influential business leaders, terrified of an RJD victory, offers a huge, anonymous donation. Do you accept 'black money' for a 'clean politics' campaign?",
+      "options": [
+        {
+          "text": "Accept the funds. The ends justify the means; defeating the RJD is paramount for Bihar's future.",
+          "nextNode": "q4_debate_corruption_attack"
+        },
+        {
+          "text": "Decline the offer and publicly expose the attempt, reinforcing your anti-corruption credentials but limiting your firepower.",
+          "nextNode": "q4_rally_clean_hands"
+        }
+      ]
+    },
+    "q3_media_blackout": {
+      "text": "Your 'Migrant Samman Yatra' is a grassroots success but faces a near-total media blackout, allegedly due to RJD pressure. Your team is demoralized. How do you break through?",
+      "options": [
+        {
+          "text": "Buy primetime advertising slots, forcing the channels to air your message. It's expensive but guarantees visibility.",
+          "nextNode": "q4_interview_emotional_appeal"
+        },
+        {
+          "text": "Bypass traditional media. Equip your 'Yatris' with smartphones to live-stream their journey.",
+          "nextNode": "q4_debate_grassroots_power"
+        }
+      ]
+    },
+    "q3_coalition_pressure": {
+      "text": "You are the farmers' hero, but potential pro-business allies are getting nervous, warning your 'activist' stance will scare away investment. How do you manage this?",
+      "options": [
+        {
+          "text": "Give a major speech reassuring the business community, framing farmer prosperity as a driver of rural demand.",
+          "nextNode": "q4_debate_balanced_growth"
+        },
+        {
+          "text": "Ignore them. Declare that farmers are the backbone of Bihar's economy and their interests come first.",
+          "nextNode": "q4_rally_farmers_first"
+        }
+      ]
+    },
+    "q3_radical_demands": {
+      "text": "The farmers' agitation is now a statewide movement. However, protest leaders now demand a complete loan waiver, which would cripple state finances. Your party is divided. What do you do?",
+      "options": [
+        {
+          "text": "Publicly back their demands. The political momentum is too valuable to lose.",
+          "nextNode": "q4_interview_populist_promise"
+        },
+        {
+          "text": "Meet with leaders to moderate their demands with a phased-waiver plan, risking being branded a traitor.",
+          "nextNode": "q4_debate_pragmatic_solution"
+        }
+      ]
+    },
+    "q3_intellectual_appeal": {
+      "text": "Your detailed farm policy is a hit with experts but is failing to connect with farmers on the ground. You are losing ground to the RJD's populist promises. What is your next move?",
+      "options": [
+        {
+          "text": "Scrap the complex paper and launch a new campaign with a few easy-to-understand, high-impact promises.",
+          "nextNode": "q4_rally_farmers_first"
+        },
+        {
+          "text": "Embark on a 'Policy Samvad' tour, holding town halls to explain the long-term benefits of your plan.",
+          "nextNode": "q4_debate_balanced_growth"
+        }
+      ]
+    },
+    "q4_debate_development": {
+      "text": "In the final televised debate, the moderator grills you on your expensive promises. Your opponents label you as fiscally irresponsible. How do you counter?",
+      "options": [
+        {
+          "text": "Detail your long-term economic plan, emphasizing investment in infrastructure and education as the path to sustainable growth.",
+          "nextNode": "q5_grassroots_mobilization"
+        },
+        {
+          "text": "Pivot to an emotional appeal, highlighting the human cost of unemployment and arguing people are worth the investment.",
+          "nextNode": "q5_social_media_blitz"
+        }
+      ]
+    },
+    "q4_rally_discipline": {
+      "text": "At a massive rally, news breaks that dissenting candidates have accused you of being an autocrat. How do you address the crowd?",
+      "options": [
+        {
+          "text": "Ignore the news and deliver your planned speech on governance, projecting an image of being unshaken.",
+          "nextNode": "q5_targeted_ads"
+        },
+        {
+          "text": "Address the controversy head-on, framing it as necessary pain for building a new, disciplined political culture.",
+          "nextNode": "q5_polarizing_statement"
+        }
+      ]
+    },
+    "q4_interview_policy": {
+      "text": "A national journalist presses you on why your campaign seems to have lost its initial spark. How do you respond?",
+      "options": [
+        {
+          "text": "Concede that the campaign had to mature and now is the time for serious policy discussion to prove you are ready to govern.",
+          "nextNode": "q5_grassroots_mobilization"
+        },
+        {
+          "text": "Subtly blame the 'old guard' in politics for resisting change, positioning yourself as a pragmatist building consensus.",
+          "nextNode": "q5_social_media_blitz"
+        }
+      ]
+    },
+    "q4_debate_attack": {
+      "text": "In the final debate, your RJD opponent calls you a 'data-crunching consultant who doesn't understand Bihar's soul.' How do you retort?",
+      "options": [
+        {
+          "text": "Attack his party's history of 'Jungle Raj,' arguing Bihar needs modern management, not outdated politics.",
+          "nextNode": "q5_polarizing_statement"
+        },
+        {
+          "text": "Showcase your extensive 'padyatra' data, demonstrating a deeper, village-level understanding of Bihar's problems.",
+          "nextNode": "q5_targeted_ads"
+        }
+      ]
+    },
+    "q4_rally_compromise": {
+      "text": "At your largest rally, a leaked document on social media suggests you've made deals with corrupt leaders. The crowd is murmuring. What do you do?",
+      "options": [
+        {
+          "text": "Dismiss the leak as a fabricated smear campaign by a desperate opposition and launch into a fiery speech.",
+          "nextNode": "q5_social_media_blitz"
+        },
+        {
+          "text": "Acknowledge that 'unpleasant compromises' are needed to defeat a greater evil, framing it as a pragmatic choice.",
+          "nextNode": "q5_grassroots_mobilization"
+        }
+      ]
+    },
+    "q4_interview_principles": {
+      "text": "In a major interview, the host praises your principled stand but asks if your refusal to compromise makes you unelectable. How do you defend your strategy?",
+      "options": [
+        {
+          "text": "Argue that Bihar is tired of the old politics of compromise and is ready for a truly clean government.",
+          "nextNode": "q5_targeted_ads"
+        },
+        {
+          "text": "Shift the focus to your grassroots strength, stating your power comes from the people, not from backroom deals.",
+          "nextNode": "q5_polarizing_statement"
+        }
+      ]
+    },
+    "q4_debate_corruption_attack": {
+      "text": "During the final debate, the INDIA bloc candidate accuses you of hypocrisy: 'You talk of clean politics but your campaign is funded by the same corrupt sources you condemn.' How do you respond?",
+      "options": [
+        {
+          "text": "Deny everything and counter-attack, accusing him of fabricating lies out of desperation.",
+          "nextNode": "q5_negative_ad_blitz"
+        },
+        {
+          "text": "Deflect by stating all donations are as per ECI rules, then pivot immediately to the RJD leader's gaffe about migrants.",
+          "nextNode": "q5_door_to_door_apology"
+        }
+      ]
+    },
+    "q4_rally_clean_hands": {
+      "text": "At a massive rally, you showcase your rejection of the secret funds. Strategists say without those funds, you are projected to lose by a thin margin. How do you address the crowd?",
+      "options": [
+        {
+          "text": "Deliver a passionate speech about choosing principles over power, asking people to become the campaign's funders.",
+          "nextNode": "q5_volunteer_mobilization"
+        },
+        {
+          "text": "Focus on the opposition's corruption, arguing that your clean hands are the only thing that can save Bihar.",
+          "nextNode": "q5_final_expose"
+        }
+      ]
+    },
+    "q4_interview_emotional_appeal": {
+      "text": "In a TV interview, the host asks if your expensive ad campaign shows a disconnect between your grassroots 'Yatra' and your methods. How do you respond?",
+      "options": [
+        {
+          "text": "Explain it as a necessary evil to break a media blockade and get the people's voice heard.",
+          "nextNode": "q5_negative_ad_blitz"
+        },
+        {
+          "text": "Announce that all ad spending was funded by small public donations and release a public dashboard to prove it.",
+          "nextNode": "q5_volunteer_mobilization"
+        }
+      ]
+    },
+    "q4_debate_grassroots_power": {
+      "text": "In the final debate, your opponent mocks your social media campaign as 'playing with phones while real leaders govern'. How do you respond?",
+      "options": [
+        {
+          "text": "Play a powerful video on the debate screens showing testimonies from your live-streamed 'Yatra'.",
+          "nextNode": "q5_door_to_door_apology"
+        },
+        {
+          "text": "Contrast your transparent, real-time engagement with his closed-door, traditional politics, branding him a relic.",
+          "nextNode": "q5_final_expose"
+        }
+      ]
+    },
+    "q4_debate_balanced_growth": {
+      "text": "In the final debate, the NDA candidate accuses you of being anti-industry. How do you present your economic vision for Bihar?",
+      "options": [
+        {
+          "text": "Argue for a symbiotic relationship between agriculture and industry, presenting a holistic 'Bihar First' model.",
+          "nextNode": "q5_final_appeal_unity"
+        },
+        {
+          "text": "Announce that several prominent industrialists have secretly endorsed your plan to show business leaders want a prosperous peasantry.",
+          "nextNode": "q5_endorsement_ploy"
+        }
+      ]
+    },
+    "q4_rally_farmers_first": {
+      "text": "At a massive 'Kisan Mahapanchayat', the crowd is fired up. This is your chance to cement your position as the undisputed leader of the farmers. What is your core message?",
+      "options": [
+        {
+          "text": "Deliver a fiery speech focused on 'Kisan-Mazdoor' unity, framing the election as a class struggle.",
+          "nextNode": "q5_caste_solidarity_push"
+        },
+        {
+          "text": "Unveil a 'First 100 Days' plan exclusively for farmers, with concrete, date-bound promises.",
+          "nextNode": "q5_specific_promise"
+        }
+      ]
+    },
+    "q4_interview_populist_promise": {
+      "text": "In a TV interview, you're asked directly: 'Will you implement the full loan waiver even if it means cutting the budget for health and education?'",
+      "options": [
+        {
+          "text": "Yes. The agricultural crisis is the single biggest emergency in Bihar, and all other priorities must wait.",
+          "nextNode": "q5_endorsement_ploy"
+        },
+        {
+          "text": "No, a balanced approach is needed. The waiver will be funded through a new anti-corruption tax on the wealthy.",
+          "nextNode": "q5_final_appeal_unity"
+        }
+      ]
+    },
+    "q4_debate_pragmatic_solution": {
+      "text": "During the debate, the RJD leader calls your phased loan-waiver a 'betrayal' of the farmers. How do you defend your pragmatic approach?",
+      "options": [
+        {
+          "text": "By explaining that unlike his empty promises, your plan is realistic and deliverable.",
+          "nextNode": "q5_specific_promise"
+        },
+        {
+          "text": "By attacking his party's track record, pointing out they had years to help farmers but did nothing.",
+          "nextNode": "q5_caste_solidarity_push"
+        }
+      ]
+    },
+    "q5_grassroots_mobilization": {
+      "text": "The final 48 hours. Polling is neck-and-neck, with rural turnout being the deciding factor. Your team suggests a final push. What's the call?",
+      "options": [
+        {
+          "text": "Deploy all remaining manpower for a massive door-to-door campaign in key rural constituencies.",
+          "nextNode": "end_narrow_victory_development"
+        },
+        {
+          "text": "Organize a 'phone-a-thon,' using your central database to personally call lakhs of undecided voters.",
+          "nextNode": "end_urban_loss_rural_gain"
+        }
+      ]
+    },
+    "q5_social_media_blitz": {
+      "text": "It's the last 48 hours and the youth vote is your key to victory. How do you lock it in?",
+      "options": [
+        {
+          "text": "Launch an all-out social media blitz with celebrity endorsements and a final, major populist promise.",
+          "nextNode": "end_wave_victory_populist"
+        },
+        {
+          "text": "Host a 12-hour continuous live stream, answering questions from young voters to show transparency.",
+          "nextNode": "end_tech_savvy_loss"
+        }
+      ]
+    },
+    "q5_targeted_ads": {
+      "text": "The final 48 hours. The election hinges on a few swing seats. Where do you focus your remaining energy?",
+      "options": [
+        {
+          "text": "Flood these swing constituencies with highly targeted WhatsApp and Facebook ads using your data.",
+          "nextNode": "end_kingmaker_strong_party"
+        },
+        {
+          "text": "Hold a final, massive 'Padayatra' through Patna to project an image of strength and popular support.",
+          "nextNode": "end_principled_loss"
+        }
+      ]
+    },
+    "q5_polarizing_statement": {
+      "text": "It's the final push. A last-minute statement could galvanize your base but alienate undecideds. What's the move?",
+      "options": [
+        {
+          "text": "Issue a sharp, polarizing statement contrasting your 'Bihari pride' vision against the 'Delhi-controlled' agendas.",
+          "nextNode": "end_polarized_victory"
+        },
+        {
+          "text": "Make a final appeal for unity and clean governance, urging voters to rise above divisive politics.",
+          "nextNode": "end_dignified_defeat"
+        }
+      ]
+    },
+    "q5_negative_ad_blitz": {
+      "text": "Final 48 hours. The race is tight. Do you unleash a final wave of hard-hitting negative ads exposing criminal records of key opposition candidates?",
+      "options": [
+        {
+          "text": "Yes, it's a dirty job, but necessary to remind voters of the stakes.",
+          "nextNode": "end_victory_by_fear"
+        },
+        {
+          "text": "No, stick to a positive message about 'clean politics' to the very end.",
+          "nextNode": "end_backlash_loss"
+        }
+      ]
+    },
+    "q5_door_to_door_apology": {
+      "text": "Final 48 hours. Your team has data showing some moderate voters were turned off by your aggressive attacks. What's the final message?",
+      "options": [
+        {
+          "text": "Deploy volunteers door-to-door with a message of 'tough but necessary' reforms, softening your image.",
+          "nextNode": "end_hung_assembly_pragmatist"
+        },
+        {
+          "text": "Double down in a final speech, stating that you don't apologize for fighting for Bihar's future.",
+          "nextNode": "end_hypocrisy_charge_sticks"
+        }
+      ]
+    },
+    "q5_volunteer_mobilization": {
+      "text": "Final 48 hours. Your campaign is running on fumes but has immense public goodwill. How do you translate that into votes?",
+      "options": [
+        {
+          "text": "Launch a massive volunteer-led 'Get Out The Vote' drive, relying on people power instead of money.",
+          "nextNode": "end_moral_victory_strong_opposition"
+        },
+        {
+          "text": "Hold silent peace marches across all district headquarters, emphasizing your moral high ground.",
+          "nextNode": "end_noble_but_ineffective"
+        }
+      ]
+    },
+    "q5_final_expose": {
+      "text": "Final 48 hours. Your team uncovers definitive proof of a land scam involving the NDA's Deputy CM candidate. Do you release it?",
+      "options": [
+        {
+          "text": "Yes, release the documents to a friendly journalist. It's the knockout blow.",
+          "nextNode": "end_last_minute_win"
+        },
+        {
+          "text": "No, it's too late for the story to gain traction and might look like a desperate smear.",
+          "nextNode": "end_too_little_too_late"
+        }
+      ]
+    },
+    "q5_final_appeal_unity": {
+      "text": "Final 48 hours. Your message of balanced growth is resonating with moderates, but your core farmer base feels you've diluted your stance. What's the final appeal?",
+      "options": [
+        {
+          "text": "A televised address appealing for a united Bihar, promising to be a CM for both the fields and the factories.",
+          "nextNode": "end_broad_coalition_win"
+        },
+        {
+          "text": "A final rally with farmers, reassuring them they are your top priority.",
+          "nextNode": "end_loss_to_populism"
+        }
+      ]
+    },
+    "q5_endorsement_ploy": {
+      "text": "Final 48 hours. How do you leverage the supposed support from industrialists?",
+      "options": [
+        {
+          "text": "Leak the names of a few well-respected business leaders who support you, creating a last-minute media sensation.",
+          "nextNode": "end_master_stroke_victory"
+        },
+        {
+          "text": "Heavily advertise the 'support of the business community' without naming names, a move that could be seen as a bluff.",
+          "nextNode": "end_bluff_called_loss"
+        }
+      ]
+    },
+    "q5_caste_solidarity_push": {
+      "text": "Final 48 hours. The campaign has become highly polarized around rural vs. urban issues. What is your final move to get your voters to the polling booths?",
+      "options": [
+        {
+          "text": "Deploy workers with a targeted message to specific caste groups within the farming community, turning class solidarity into an electoral weapon.",
+          "nextNode": "end_agrarian_revolt_win"
+        },
+        {
+          "text": "Organize tractor rallies to block major highways into cities, a show of force that energizes your base but causes a massive urban backlash.",
+          "nextNode": "end_divided_bihar_loss"
+        }
+      ]
+    },
+    "q5_specific_promise": {
+      "text": "Final 48 hours. Your '100 Days' plan is popular, but opponents are attacking it as fiscally impossible. How do you close the deal?",
+      "options": [
+        {
+          "text": "Distribute a signed, written 'guarantee card' to every farmer household, making your promise a personal bond.",
+          "nextNode": "end_clear_mandate_farmers"
+        },
+        {
+          "text": "Hold a press conference with economists to explain how you'll fund the plan, trying to win on credibility.",
+          "nextNode": "end_unconvincing_economics"
+        }
+      ]
+    },
+    "end_narrow_victory_development": {
+      "text": "Victory! Your grassroots push in the final hours secured a razor-thin majority.",
+      "isEnding": true,
+      "summary": "Your initial 'Naya Bihar' message, combined with a strong anti-corruption stance, set a positive tone. However, the campaign was nearly derailed by internal dissent over resource allocation. Your pragmatic choice to fund key candidates, followed by a sober, development-focused debate performance, reassured moderate voters. The final decision to invest in a massive door-to-door campaign proved decisive, converting just enough rural voters to push you over the finish line. You have a fragile mandate to govern, with a party that has tasted rebellion and a public that expects you to deliver on your economic promises without delay.",
+      "stats": {
+        "publicApproval": "52%",
+        "economicOutlook": "Cautious Optimism",
+        "partyCohesion": "Fragile Unity",
+        "socialFabric": "Broadly Harmonious"
+      }
+    },
+    "end_urban_loss_rural_gain": {
+      "text": "Defeat. While your final phone-a-thon connected with many, it wasn't enough to close the gap.",
+      "isEnding": true,
+      "summary": "You ran a campaign on big ideas for a 'Naya Bihar' and took a strong stand against corruption. However, your decision to prioritize rebellious candidates drained resources, and your development-focused debate message, while solid, lacked the passion to create a wave. The final phone-a-thon was a novel idea but lacked the personal touch of a ground campaign. You won significant respect in urban centers, but failed to make sufficient inroads in rural Bihar, where the opposition's traditional politics held sway. Jan Suraaj is now the primary opposition, a powerful platform from which to build for the next election.",
+      "stats": {
+        "publicApproval": "47%",
+        "economicOutlook": "Status Quo",
+        "partyCohesion": "Internal Dissent",
+        "socialFabric": "Moderately Polarized"
+      }
+    },
+    "end_wave_victory_populist": {
+      "text": "A resounding victory! The final social media blitz created an unstoppable youth wave.",
+      "isEnding": true,
+      "summary": "Your 'Naya Bihar' campaign successfully captured the youth's imagination. You masterfully turned the agricultural scandal into a viral social media movement, and your emotional debate performance resonated deeply. The final populist promise, combined with a massive social media push, led to an unprecedented turnout among young voters, securing a landslide victory. You have an overwhelming mandate for change and your authority within the party is absolute. However, your big-spending promises have economists worried, and the state's finances will be under immense strain from day one.",
+      "stats": {
+        "publicApproval": "68%",
+        "economicOutlook": "Populist Strain",
+        "partyCohesion": "Iron Grip",
+        "socialFabric": "Broadly Harmonious"
+      }
+    },
+    "end_tech_savvy_loss": {
+      "text": "So close, yet so far. The marathon live stream was a critical success but an electoral failure.",
+      "isEnding": true,
+      "summary": "Your campaign was a masterclass in modern political communication. The 'Naya Bihar' message, amplified by viral videos and a powerful debate performance, made you the voice of the youth. Your final 12-hour live stream was praised for its transparency and became a national news story. Unfortunately, it didn't translate into enough votes on the ground. You won the cities but lost the countryside. While you have lost the election, you have fundamentally changed how politics is conducted in Bihar and built a formidable, tech-savvy party that is poised for future success.",
+      "stats": {
+        "publicApproval": "48%",
+        "economicOutlook": "Status Quo",
+        "partyCohesion": "United in Defeat",
+        "socialFabric": "Generation Gap"
+      }
+    },
+    "end_kingmaker_strong_party": {
+      "text": "The results are in: a hung assembly. Jan Suraaj holds the balance of power.",
+      "isEnding": true,
+      "summary": "Your campaign began with a promise of a 'Naya Bihar' but was tested by internal rebellion. By taking a firm, disciplined stand, you projected strength. While ignoring the rebels at the rally was risky, your data-driven campaign, culminating in a highly effective targeted ad blitz in the final hours, allowed you to win a significant number of seats. You did not win a majority, but neither did anyone else. Jan Suraaj is now the kingmaker. Your party is disciplined and united behind you, and both the NDA and INDIA blocs are now courting you for support, giving you immense leverage to shape the next government and its policies.",
+      "stats": {
+        "publicApproval": "35%",
+        "economicOutlook": "Uncertainty, High Leverage",
+        "partyCohesion": "Iron Grip",
+        "socialFabric": "Fragmented"
+      }
+    },
+    "end_principled_loss": {
+      "text": "A respectable defeat. Your focus on a grand gesture in Patna couldn't overcome the opposition's local focus.",
+      "isEnding": true,
+      "summary": "You ran a campaign of principle, refusing to bow to internal dissenters or engage in backroom deals. Your strength of character was on display at the Patna rally where you ignored the brewing rebellion. However, your principled stand left you financially constrained, and your final 'Padayatra' in the capital, while visually impressive, failed to influence voters in crucial swing seats where your opponents were focused. You have lost the election, but you have established Jan Suraaj as a party of integrity. Your party is cohesive, and you have become a respected, if not victorious, political figure.",
+      "stats": {
+        "publicApproval": "44%",
+        "economicOutlook": "Status Quo",
+        "partyCohesion": "Strong Moral Core",
+        "socialFabric": "Broadly Harmonious"
+      }
+    },
+    "end_polarized_victory": {
+      "text": "Victory through fire! Your final polarizing statement galvanized your base and delivered a narrow win.",
+      "isEnding": true,
+      "summary": "Your campaign was defined by a strong, uncompromising vision. You stood up to internal dissent and refused to make deals with corrupt politicians. Your aggressive attack on 'Jungle Raj' during the debate, followed by a final, sharp statement on 'Bihari Pride', energized your core supporters to turn out in massive numbers. This was just enough to secure a slim majority in a deeply polarized election. You have a mandate, but it's a divisive one. Your party is firmly under your control, but the social fabric of the state is frayed, and governing will require navigating a landscape of intense opposition.",
+      "stats": {
+        "publicApproval": "51%",
+        "economicOutlook": "Mandate for Reform",
+        "partyCohesion": "Iron Grip",
+        "socialFabric": "Deeply Polarized"
+      }
+    },
+    "end_dignified_defeat": {
+      "text": "Defeated, but with dignity. Your final appeal for unity was praised but wasn't enough to win.",
+      "isEnding": true,
+      "summary": "You ran a textbook campaign on good governance and principles. You faced down internal rebellion and refused to compromise your ideals. Your final message of unity and clean governance was seen as statesmanlike and won you many admirers among the educated middle class. However, it failed to generate the passionate response needed to counter the entrenched caste and patronage networks of your opponents. You lost the election, but you have elevated the political discourse. Your party, though defeated, remains cohesive and holds the moral high ground, positioning you as the conscience of Bihar politics.",
+      "stats": {
+        "publicApproval": "46%",
+        "economicOutlook": "Status Quo",
+        "partyCohesion": "United in Principle",
+        "socialFabric": "Broadly Harmonious"
+      }
+    },
+    "end_victory_by_fear": {
+      "text": "A dark victory. The final negative ad blitz pushed you over the top by suppressing the opposition's vote.",
+      "isEnding": true,
+      "summary": "Your campaign's core message of 'clean politics' was brutally effective, especially after the RJD leader's gaffe. You took a pragmatic but dangerous path by accepting secret funding, which you successfully denied during the debate. The final decision to unleash a barrage of negative ads reminded just enough voters of the opposition's criminal past to stay home or switch their vote to you. You have won a majority, but the victory feels hollow. Your reliance on secret money and fear-based tactics has damaged your 'clean' image and led to deep social polarization. Your party is united in victory, but the economic path forward is clouded by your hidden obligations.",
+      "stats": {
+        "publicApproval": "53%",
+        "economicOutlook": "Shadow of Cronyism",
+        "partyCohesion": "Pragmatic Unity",
+        "socialFabric": "Deeply Polarized"
+      }
+    },
+    "end_backlash_loss": {
+      "text": "Defeat. Your refusal to go negative in the final hours was seen as a sign of weakness, not strength.",
+      "isEnding": true,
+      "summary": "You started with a powerful 'clean politics' message, effectively using the RJD's gaffe to gain momentum. The decision to accept undisclosed funds gave you the firepower you needed. However, after successfully denying the funding allegations in the debate, your last-minute choice to stick to a positive message fell flat. The opposition's final push was more aggressive, and you failed to land a decisive blow. Voters interpreted your restraint as a lack of a killer instinct. You have lost a winnable election, leaving your party wondering if a cleaner path is a weaker one.",
+      "stats": {
+        "publicApproval": "45%",
+        "economicOutlook": "Status Quo",
+        "partyCohesion": "Internal Dissent",
+        "socialFabric": "Moderately Polarized"
+      }
+    },
+    "end_hung_assembly_pragmatist": {
+      "text": "A hung assembly. Your pragmatic final move helped you win enough seats to become the kingmaker.",
+      "isEnding": true,
+      "summary": "Your 'clean politics' campaign was relentless, hammering the opposition on their mistakes. Accepting secret funds was a risky move, and your debate deflection was clumsy but effective. The final door-to-door campaign to soften your aggressive image worked wonders in swing constituencies, allowing you to pick up crucial seats without winning an outright majority. Now, both major alliances need your support to form a government. Your party's cohesion is strained by the moral compromises made, but your pragmatic approach has given you immense power to dictate the terms of the next government.",
+      "stats": {
+        "publicApproval": "38%",
+        "economicOutlook": "Uncertainty, High Leverage",
+        "partyCohesion": "Fragile Unity",
+        "socialFabric": "Fragmented"
+      }
+    },
+    "end_hypocrisy_charge_sticks": {
+      "text": "Defeat. Your aggressive campaign backfired, and the charge of hypocrisy stuck.",
+      "isEnding": true,
+      "summary": "Capitalizing on the RJD leader's gaffe gave your 'clean politics' campaign a sharp edge. However, the decision to accept secret funds, followed by a clumsy debate deflection and a final, unapologetic speech, created a narrative of hypocrisy that you couldn't shake. Your powerful grassroots video campaign was overshadowed by this contradiction. Moderate voters, initially attracted to your message, were repelled by what they saw as a 'win-at-all-costs' attitude. You have lost the election, and your party is now deeply divided between pragmatists and idealists.",
+      "stats": {
+        "publicApproval": "42%",
+        "economicOutlook": "Status Quo",
+        "partyCohesion": "Internal Dissent",
+        "socialFabric": "Deeply Polarized"
+      }
+    },
+    "end_moral_victory_strong_opposition": {
+      "text": "A moral victory. You lost the election, but you won the hearts of many and built a powerful movement.",
+      "isEnding": true,
+      "summary": "Your campaign was a testament to idealism. You leveraged the RJD's mistake not for political gain, but to highlight a real issue. Your bold rejection of 'black money' and the subsequent pivot to a people-funded campaign inspired thousands. The final volunteer-led push resulted in a massive vote share, though not enough seats to win. You have lost the election, but you have created a powerful, grassroots-funded party that now stands as the state's most credible opposition. Your party is united with a strong moral purpose, and you are seen as a beacon of hope for a new kind of politics.",
+      "stats": {
+        "publicApproval": "49%",
+        "economicOutlook": "Status Quo",
+        "partyCohesion": "Strong Moral Core",
+        "socialFabric": "Broadly Harmonious"
+      }
+    },
+    "end_noble_but_ineffective": {
+      "text": "Defeated. Your final silent marches were seen as a noble but politically naive gesture.",
+      "isEnding": true,
+      "summary": "You ran a campaign of impeccable integrity. From capitalizing on the RJD's gaffe to exposing and rejecting secret funding, your ethical stance was unwavering. Your passionate speech at the Patna rally about choosing principles over power was lauded. However, the final choice to hold silent marches was a strategic error. In the noisy final hours of the campaign, your silence was drowned out. You lost the election, but your unwavering commitment to clean politics has earned you immense respect. Your party, while small, is ideologically pure and may serve as the state's moral compass.",
+      "stats": {
+        "publicApproval": "43%",
+        "economicOutlook": "Status Quo",
+        "partyCohesion": "Ideologically Pure",
+        "socialFabric": "Broadly Harmonious"
+      }
+    },
+    "end_last_minute_win": {
+      "text": "A stunning, last-minute victory! The final exposé on the NDA's Deputy CM candidate turned the tide.",
+      "isEnding": true,
+      "summary": "Your campaign perfectly blended high principles with street-smart tactics. You rejected corrupt funding, built a powerful grassroots narrative through your 'Yatra', and dominated the final debate. The decision to release the land scam documents in the final 48 hours was a masterstroke. It caused a collapse in the NDA's vote share and a surge of support to you as the only clean alternative. You have won a clear majority. Your grip on the party is absolute, and you have a strong mandate to pursue your anti-corruption agenda, though the state's social fabric is tense after such a brutal finish.",
+      "stats": {
+        "publicApproval": "58%",
+        "economicOutlook": "Strong Mandate for Reform",
+        "partyCohesion": "Iron Grip",
+        "socialFabric": "Tense"
+      }
+    },
+    "end_too_little_too_late": {
+      "text": "Defeat. You held the winning card but chose not to play it.",
+      "isEnding": true,
+      "summary": "You ran an almost flawless campaign, positioning yourself as the only clean alternative by rejecting dirty money and building a grassroots movement. Your performance in the final debate solidified your credibility. However, your decision not to release the explosive land scam documents in the final hours was a fatal error in judgment. You feared it would look like a desperate smear, but it was the knockout punch you needed. The NDA held on to win by a whisker. You lost the election with the moral high ground, leaving your party to wonder what could have been if you had been more ruthless.",
+      "stats": {
+        "publicApproval": "48%",
+        "economicOutlook": "Status Quo",
+        "partyCohesion": "Regretful Unity",
+        "socialFabric": "Moderately Polarized"
+      }
+    },
+    "end_broad_coalition_win": {
+      "text": "Victory! Your final message of unity resonated, securing a comfortable majority.",
+      "isEnding": true,
+      "summary": "Your initial focus on neglected communities gave your campaign a strong moral core. By becoming the face of the farmers' protest, you gained immense credibility. You skillfully balanced this with reassurances to the business community and presented a pragmatic, balanced vision in the final debate. Your closing televised address, appealing for a united Bihar, was the final touch, winning over undecided urban and rural voters alike. You have won a strong mandate, and your ability to build a broad consensus has left your party united and the state's social fabric in a healthy condition, promising a stable government.",
+      "stats": {
+        "publicApproval": "62%",
+        "economicOutlook": "Strong Mandate for Growth",
+        "partyCohesion": "Solid",
+        "socialFabric": "Broadly Harmonious"
+      }
+    },
+    "end_loss_to_populism": {
+      "text": "Defeat. In the final hours, your core supporters felt abandoned, and your vote bank fractured.",
+      "isEnding": true,
+      "summary": "You began by championing the cause of farmers and workers, building a powerful movement. However, your attempts to moderate your stance to appease business interests and urban voters were seen as a betrayal by your base. Your balanced vision in the debate and the final plea for unity were perceived as a dilution of your core message. While you gained some moderate votes, a significant chunk of your initial supporters shifted to the more consistently populist RJD at the last minute. You tried to be everything to everyone and ended up losing the group that mattered most.",
+      "stats": {
+        "publicApproval": "45%",
+        "economicOutlook": "Status Quo",
+        "partyCohesion": "Internal Dissent",
+        "socialFabric": "Fragmented"
+      }
+    },
+    "end_master_stroke_victory": {
+      "text": "A brilliant victory! The last-minute endorsement from business leaders sealed the deal.",
+      "isEnding": true,
+      "summary": "Your campaign brilliantly walked a tightrope. You championed the farmers' cause while simultaneously cultivating back-channels with the industry. The decision to make a bold populist promise on loan waivers, and then the masterstroke of leaking the names of respected industrialists who supported you, was a strategic triumph. It neutralized the NDA's pro-business credentials and consolidated both rural and urban votes. You have won a decisive victory with a united party and a mandate that bridges the state's economic divides, though delivering on your populist promises will be an immediate challenge.",
+      "stats": {
+        "publicApproval": "65%",
+        "economicOutlook": "Populist Strain",
+        "partyCohesion": "Iron Grip",
+        "socialFabric": "Broadly Harmonious"
+      }
+    },
+    "end_bluff_called_loss": {
+      "text": "Defeat. Your claims of business support were seen as an empty bluff, and your credibility collapsed.",
+      "isEnding": true,
+      "summary": "Your strategy of appealing to both farmers and industry was ambitious. Making a huge populist promise like the full loan waiver put your economic credibility on the line. The final gambit of advertising 'business community support' without providing any names was a disastrous miscalculation. The opposition immediately called your bluff, and in the final 48 hours, your campaign was consumed by a crisis of trust. Voters saw you as a slick strategist trying to be too clever, and they punished you for it. Your party is now in disarray, questioning your leadership.",
+      "stats": {
+        "publicApproval": "40%",
+        "economicOutlook": "Status Quo",
+        "partyCohesion": "Leadership in Question",
+        "socialFabric": "Moderately Polarized"
+      }
+    },
+    "end_agrarian_revolt_win": {
+      "text": "You've won! The countryside rose up in a wave of support, delivering a stunning victory.",
+      "isEnding": true,
+      "summary": "Your campaign unapologetically sided with the farmers and laborers of Bihar. By embracing the farmers' protest and framing the election as a class struggle, you ignited a powerful agrarian movement. Your pragmatic defense of a realistic loan waiver plan was seen as honest, not weak. The final push to mobilize specific caste groups within the farming community was a masterclass in social engineering, creating a consolidated rural vote bank that the other parties could not break. You have a huge mandate from rural Bihar, but the cities are wary, and the social fabric is deeply polarized along class lines.",
+      "stats": {
+        "publicApproval": "55%",
+        "economicOutlook": "Mandate for Agrarian Reform",
+        "partyCohesion": "Solid",
+        "socialFabric": "Deeply Polarized"
+      }
+    },
+    "end_divided_bihar_loss": {
+      "text": "A crushing defeat. Your final show of force alienated the cities and led to a massive backlash.",
+      "isEnding": true,
+      "summary": "Your campaign's focus on an agrarian class struggle was a high-risk, high-reward strategy. While you energized the farmers and laborers, your rhetoric increasingly alienated the urban middle class and business communities. The final decision to organize tractor rallies that blocked highways was the last straw. It was perceived as an act of anarchy, not a political statement, causing a huge consolidation of urban and moderate votes against you. You may have won the villages, but you lost the cities so badly that it cost you the election. Your party is now seen as a purely rural force, with little hope of governing the entire state.",
+      "stats": {
+        "publicApproval": "41%",
+        "economicOutlook": "Urban-Rural Divide",
+        "partyCohesion": "Factionalized",
+        "socialFabric": "Deeply Polarized"
+      }
+    },
+    "end_clear_mandate_farmers": {
+      "text": "Victory! Your personal guarantee to the farmers was the key that unlocked a majority.",
+      "isEnding": true,
+      "summary": "Your campaign was laser-focused on the agricultural community. You became the face of their protest and skillfully moderated their demands into a pragmatic, deliverable plan. Your '100 Days' agenda gave voters a concrete vision, and your debate performance showcased you as an honest and capable leader. The final stroke of genius was the 'guarantee card'. It transformed a political promise into a personal bond, creating an unbreakable trust with millions of farmers. This was enough to give you a clear, if not massive, majority. You have a strong mandate for agricultural reform, but you must now work to win over the state's urban population.",
+      "stats": {
+        "publicApproval": "57%",
+        "economicOutlook": "Mandate for Agrarian Reform",
+        "partyCohesion": "Solid",
+        "socialFabric": "Moderately Polarized"
+      }
+    },
+    "end_unconvincing_economics": {
+      "text": "Defeat. Your promises to farmers were popular, but you failed to convince the broader public that you could pay for them.",
+      "isEnding": true,
+      "summary": "You successfully positioned yourself as the champion of the farmers, building a powerful campaign around their key issues. Your '100 Days' plan was a brilliant piece of political marketing. However, your inability to convincingly explain how you would fund these ambitious promises became your Achilles' heel. The final press conference with economists was too technical and came too late. The opposition successfully painted you as a populist who would bankrupt the state. You won the farmers' hearts, but you lost the battle for economic credibility, and with it, the election. The party remains strong in rural areas but needs a new economic vision.",
+      "stats": {
+        "publicApproval": "46%",
+        "economicOutlook": "Status Quo",
+        "partyCohesion": "Strong but Disappointed",
+        "socialFabric": "Moderately Polarized"
+      }
+    }
+  }
+}
