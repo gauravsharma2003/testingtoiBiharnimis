@@ -28,13 +28,13 @@ const CTAButton = ({
   const variantStyles = variants[variant] || variants.primary
 
   return (
-    <div className={`relative inline-block ${className}`}>
+    <div className={`relative ${className}`} style={{ paddingRight: '10px', paddingBottom: '10px' }}>
       <div
         aria-hidden
-        className={`absolute inset-0 rounded-lg ${variantStyles.shadow} ${variantStyles.border}`}
+        className={`absolute top-0 left-0 right-2.5 bottom-2.5 rounded-lg ${variantStyles.shadow} ${variantStyles.border}`}
         style={{ 
-          transform: hovered ? "translate(10px, 10px)" : "translate(6px, 6px)",
-          transition: "transform 120ms ease"
+          transform: "translate(6px, 6px)",
+          transition: "none"
         }}
       />
       <button
@@ -43,10 +43,8 @@ const CTAButton = ({
         onMouseLeave={() => setHovered(false)}
         onFocus={() => setHovered(true)}
         onBlur={() => setHovered(false)}
-        className={`relative px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-lg font-semibold text-sm sm:text-base md:text-lg ${variantStyles.bg} ${variantStyles.text} ${variantStyles.border} flex items-center gap-2 sm:gap-3`}
+        className={`relative w-full px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-lg font-semibold text-sm sm:text-base md:text-lg ${variantStyles.bg} ${variantStyles.text} ${variantStyles.border} flex items-center justify-center gap-2 sm:gap-3 transition-transform duration-150 ease-out ${hovered ? 'translate-x-1.5 translate-y-1.5' : ''}`}
         style={{ 
-          transition: "transform 120ms ease", 
-          transform: hovered ? "translate(6px, 6px)" : "translate(0px, 0px)", 
           zIndex: 10 
         }}
         onClick={onClick}
