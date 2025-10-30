@@ -127,10 +127,40 @@ function GameComponent({ gameData, candidateName, onBack }) {
   }
 
   const restartGame = () => {
+    // Track restart event
+    const eventData = { character_name: candidateName }
+    console.log('GA Event: restart', eventData)
+    if (window.gtag) {
+      window.gtag('event', 'restart', eventData)
+    }
+    
     setCurrentNode(gameData.startNode)
     setChoiceHistory([])
     setGameStarted(false)
     setStartTime(null)
+  }
+
+  const handleReturnToMenu = () => {
+    // Determine from_screen based on current state
+    let fromScreen = 'intro'
+    if (node?.isEnding) {
+      fromScreen = 'ending'
+    } else if (gameStarted) {
+      fromScreen = 'game'
+    }
+    
+    // Track return_to_menu event
+    const eventData = {
+      from_screen: fromScreen,
+      decision_number_at_exit: choiceHistory.length,
+      character_name: candidateName
+    }
+    console.log('GA Event: return_to_menu', eventData)
+    if (window.gtag) {
+      window.gtag('event', 'return_to_menu', eventData)
+    }
+    
+    onBack()
   }
 
   const startGame = () => {
@@ -195,7 +225,7 @@ function GameComponent({ gameData, candidateName, onBack }) {
             <div className="flex gap-4 justify-center lg:justify-start">
               <button 
                 className="bg-gray-100 text-black px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-lg font-semibold text-sm sm:text-base md:text-lg hover:bg-gray-300 transition-colors duration-200 flex items-center gap-2 sm:gap-3"
-                onClick={onBack}
+                onClick={handleReturnToMenu}
               >
                 <span className="material-icons text-sm sm:text-base">arrow_back</span>
                 Back
@@ -307,7 +337,7 @@ function GameComponent({ gameData, candidateName, onBack }) {
             <div className="flex gap-4 justify-center">
               <button 
                 className="bg-gray-200 text-black px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-lg font-semibold text-sm sm:text-base md:text-lg hover:bg-gray-300 transition-colors duration-200 flex items-center gap-2 sm:gap-3"
-                onClick={onBack}
+                onClick={handleReturnToMenu}
               >
                 <span className="material-icons text-sm sm:text-base">arrow_back</span>
                 Back to Menu
@@ -334,7 +364,7 @@ function GameComponent({ gameData, candidateName, onBack }) {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
           <div className="flex items-center gap-2 sm:gap-3">
             <button 
-              onClick={onBack}
+              onClick={handleReturnToMenu}
               className="flex items-center gap-1 text-gray-400 hover:text-white transition-colors"
             >
               <span className="material-icons text-lg">arrow_back</span>
