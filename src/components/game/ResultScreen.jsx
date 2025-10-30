@@ -1,0 +1,132 @@
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
+import { trackReturnToMenu, trackRestart } from '../../utils/analytics'
+import CTAButton from '../shared/CTAButton'
+
+const ResultScreen = ({ 
+  nodeData,
+  candidateKey, 
+//   choiceHistory, 
+//   elapsedTime,
+  onBackToMenu,
+  onPlayAgain 
+}) => {
+  const navigate = useNavigate()
+
+  const handleBackToMenu = () => {
+    trackReturnToMenu(candidateKey, nodeData.text)
+    onBackToMenu()
+  }
+
+  const handlePlayAgain = () => {
+    trackRestart(candidateKey, nodeData.text)
+    onPlayAgain()
+  }
+
+  const resultMatch = nodeData.text.match(/^(VICTORY!|DEFEAT|NARROW VICTORY|LANDSLIDE VICTORY|NARROW DEFEAT|PYRRHIC VICTORY)/)
+  const result = resultMatch ? resultMatch[1] : 'RESULT'
+  
+  const getResultIcon = (result) => {
+    if (result.includes('VICTORY')) return 'emoji_events'
+    if (result.includes('DEFEAT')) return 'sentiment_dissatisfied'
+    return 'help_outline'
+  }
+  
+  const getResultColor = (result) => {
+    if (result.includes('VICTORY')) return 'text-black'
+    if (result.includes('DEFEAT')) return 'text-gray-600'
+    return 'text-gray-800'
+  }
+
+  return (
+    <div className="w-full min-h-screen bg-white flex flex-col">
+      {/* Header */}
+      <header className="bg-black px-3 sm:px-4 md:px-6 lg:px-8 py-3 sm:py-4 md:py-6">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
+          <div 
+            className="flex items-center gap-2 sm:gap-3 cursor-pointer hover:opacity-80 transition-opacity"
+            onClick={() => navigate('/')}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => e.key === 'Enter' && navigate('/')}
+          >
+            <span className="material-icons text-white text-lg sm:text-xl md:text-2xl">how_to_vote</span>
+            <h1 className="text-base sm:text-lg md:text-xl font-semibold text-white">Bihar Election</h1>
+          </div>
+          <div className="w-full sm:w-48 md:w-56 lg:w-64 bg-gray-700 rounded-full h-2">
+            <div className="bg-white h-2 rounded-full w-full"></div>
+          </div>
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <main className="flex-1 max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 md:py-8 lg:py-12">
+        {/* Result Section */}
+        <div className="text-center mb-6 sm:mb-8 md:mb-12 lg:mb-16">
+          <span className={`material-icons text-4xl sm:text-5xl md:text-6xl lg:text-8xl ${getResultColor(result)} mb-3 sm:mb-4 md:mb-6 block`}>
+            {getResultIcon(result)}
+          </span>
+          <h2 className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl font-bold ${getResultColor(result)} mb-3 sm:mb-4 md:mb-6 px-2`}>
+            {result}
+          </h2>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed px-3 sm:px-4">
+            {nodeData.text.replace(/^[A-Z ]+!\s*/, '')}
+          </p>
+        </div>
+
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 xl:gap-12 mb-6 sm:mb-8 lg:mb-12">
+          {/* Campaign Summary - order-2 on mobile, order-1 on lg+ */}
+          <div className="order-2 lg:order-1 bg-white border border-gray-200 rounded-xl p-3 sm:p-4 md:p-6 lg:p-8">
+            <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4 md:mb-6">
+              <span className="material-icons text-black text-lg sm:text-xl md:text-2xl">summarize</span>
+              <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-black">Campaign Summary</h3>
+            </div>
+            <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed">{nodeData.summary}</p>
+          </div>
+
+          {/* Statistics - order-1 on mobile, order-2 on lg+ */}
+          {nodeData.stats && (
+            <div className="order-1 lg:order-2 bg-white border border-gray-200 rounded-xl p-3 sm:p-4 md:p-6 lg:p-8">
+              <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4 md:mb-6">
+                <span className="material-icons text-black text-lg sm:text-xl md:text-2xl">analytics</span>
+                <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-black">Final Statistics</h3>
+              </div>
+              <div className="space-y-2 sm:space-y-3 md:space-y-4">
+                {Object.entries(nodeData.stats).map(([key, value]) => (
+                  <div key={key} className="flex justify-between items-center p-2 sm:p-3 md:p-4 bg-gray-50 border border-gray-200 rounded-lg">
+                    <span className="text-xs sm:text-sm text-gray-600 font-medium">
+                      {key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
+                    </span>
+                    <span className="text-xs sm:text-sm md:text-base text-black font-semibold">{value}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Actions */}
+        <div className="text-center">
+          <div className="flex gap-4 justify-center flex-wrap">
+            <CTAButton 
+              onClick={handleBackToMenu}
+              icon="arrow_back"
+              variant="secondary"
+            >
+              BACK TO MENU
+            </CTAButton>
+            <CTAButton 
+              onClick={handlePlayAgain}
+              icon="refresh"
+            >
+              PLAY AGAIN
+            </CTAButton>
+          </div>
+        </div>
+      </main>
+    </div>
+  )
+}
+
+export default ResultScreen
