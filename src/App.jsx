@@ -126,7 +126,7 @@ function App() {
             </div>
           </div>
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     )
   }
@@ -289,7 +289,7 @@ function GameComponent({ gameData, candidateName, onBack }) {
           </div>
         </div>
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     )
   }
@@ -392,7 +392,7 @@ function GameComponent({ gameData, candidateName, onBack }) {
             </div>
           </div>
         </main>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     )
   }
@@ -479,21 +479,21 @@ function GameComponent({ gameData, candidateName, onBack }) {
           </div>
         </div>
       </main>
-      <Footer />
+
     </div>
   )
 }
 
-function Footer() {
-  return (
-    <footer className="bg-gray-100 border-t border-gray-200 py-4 px-4 mt-auto">
-      <div className="max-w-7xl mx-auto text-center">
-        <p className="text-sm text-gray-600">
-          It is POC for Times of India. For feedback: <a href="mailto:gaurav.sharma4@timesinternet.in" className="text-gray-900 hover:text-gray-700 underline">gaurav.sharma4@timesinternet.in</a>
-        </p>
-      </div>
-    </footer>
-  )
-}
+// function Footer() {
+//   return (
+//     <footer className="bg-gray-100 border-t border-gray-200 py-4 px-4 mt-auto">
+//       <div className="max-w-7xl mx-auto text-center">
+//         <p className="text-sm text-gray-600">
+//           It is POC for Times of India. For feedback: <a href="mailto:gaurav.sharma4@timesinternet.in" className="text-gray-900 hover:text-gray-700 underline">gaurav.sharma4@timesinternet.in</a>
+//         </p>
+//       </div>
+//     </footer>
+//   )
+// }
 
 export default App
