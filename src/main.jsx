@@ -1,11 +1,18 @@
 import React from 'react'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
+import Hi from './Hi.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <BrowserRouter basename="/elections/assembly-elections/bihar/simulation-room">
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/hi" element={<Hi />} />
+      </Routes>
+    </BrowserRouter>
   </StrictMode>,
 )
