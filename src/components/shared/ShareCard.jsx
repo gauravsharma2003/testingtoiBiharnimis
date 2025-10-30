@@ -14,7 +14,7 @@ const ShareCard = ({ nodeData, candidateKey }) => {
     // Prevent multiple shares
     if (hasSharedRef.current || isSharing) return
     
-    // Automatically trigger share when component mount
+    // Automatically trigger share when component mounts properly
     const shareCard = async () => {
       hasSharedRef.current = true
       setIsSharing(true)
@@ -26,16 +26,31 @@ const ShareCard = ({ nodeData, candidateKey }) => {
       }
 
       try {
-        // Wait a moment for images to load
+        // Wait for images to fully load
+        const images = element.querySelectorAll('img')
+        await Promise.all(
+          Array.from(images).map(img => {
+            if (img.complete) return Promise.resolve()
+            return new Promise((resolve, reject) => {
+              img.onload = resolve
+              img.onerror = reject
+              // Set a timeout in case image fails
+              setTimeout(resolve, 2000)
+            })
+          })
+        )
+        
+        // Additional wait for safety
         await new Promise(resolve => setTimeout(resolve, 500))
         
         const canvas = await html2canvas(element, {
           backgroundColor: '#ffffff',
           scale: 2,
-          logging: false,
+          logging: true,
           windowWidth: element.scrollWidth,
           windowHeight: element.scrollHeight,
-          useCORS: true
+          useCORS: true,
+          allowTaint: true
         })
         
         const blob = await (await fetch(canvas.toDataURL('image/png'))).blob()
@@ -79,41 +94,42 @@ const ShareCard = ({ nodeData, candidateKey }) => {
         <img 
           src="/election_header.jpeg" 
           alt="Bihar Election Header"
-          className="w-full h-auto"
-          crossOrigin="anonymous"
+          style={{ width: '100%', height: 'auto', display: 'block' }}
         />
       </div>
 
       {/* Result Section */}
       <div className="px-6 py-4 text-center" style={{ backgroundColor: '#ffffff' }}>
-        <h3 className="text-2xl font-bold mb-2" style={{ color: '#111827' }}>
+        <h3 className="text-2xl mb-2" style={{ color: '#111827', fontWeight: 'bold' }}>
           {result}
         </h3>
-        <p className="text-sm leading-relaxed" style={{ color: '#374151' }}>
+        <p className="text-sm leading-relaxed" style={{ color: '#374151', fontWeight: 'normal' }}>
           {resultDescription}
         </p>
       </div>
 
       {/* Final Statistics */}
       {nodeData.stats && (
-        <div className="px-6 py-4" style={{ backgroundColor: '#f9fafb' }}>
-          <h4 className="text-lg font-bold mb-3 flex items-center gap-2" style={{ color: '#111827' }}>
-            <span className="material-icons text-base">analytics</span>
-            Final Statistics
-          </h4>
-          <div className="space-y-2">
-            {Object.entries(nodeData.stats).map(([key, value]) => (
-              <div 
-                key={key} 
-                className="flex justify-between items-center p-2 rounded-lg"
-                style={{ backgroundColor: '#ffffff', border: '1px solid #e5e7eb' }}
-              >
-                <span className="text-xs font-medium" style={{ color: '#4b5563' }}>
-                  {key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
-                </span>
-                <span className="text-xs font-bold" style={{ color: '#111827' }}>{value}</span>
-              </div>
-            ))}
+        <div className="w-10/12 mx-auto py-4 flex justify-center" style={{ backgroundColor: '#f9fafb' }}>
+          <div style={{ width: '80%' }}>
+            <h4 className="text-lg font-bold mb-3 flex items-center gap-2" style={{ color: '#111827' }}>
+              <span className="material-icons text-base">analytics</span>
+              Final Statistics
+            </h4>
+            <div className="space-y-2">
+              {Object.entries(nodeData.stats).map(([key, value]) => (
+                <div 
+                  key={key} 
+                  className="flex justify-between items-center p-2 rounded-lg"
+                  style={{ backgroundColor: '#ffffff', border: '1px solid #e5e7eb' }}
+                >
+                  <span className="text-xs font-medium" style={{ color: '#4b5563' }}>
+                    {key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
+                  </span>
+                  <span className="text-xs font-bold" style={{ color: '#111827' }}>{value}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       )}
