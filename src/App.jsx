@@ -1,17 +1,36 @@
 import React, { useState } from 'react'
 import './App.css'
 import nitishData from '../json/nitish.json'
-import bjpData from '../json/bjp.json'
+// import bjpData from '../json/bjp.json'
 import chiragData from '../json/chirag.json'
 import prashantData from '../json/prashant.json'
 import tejashwiData from '../json/tejashwi.json'
 
 const gameDataMap = {
-  nitish: { data: nitishData, fullName: "Nitish Kumar" },
-  bjp: { data: bjpData, fullName: "BJP" },
-  chirag: { data: chiragData, fullName: "Chirag Paswan" },
-  prashant: { data: prashantData, fullName: "Prashant Kishor" },
-  tejashwi: { data: tejashwiData, fullName: "Tejashwi Yadav" }
+  nitish: { 
+    data: nitishData, 
+    fullName: "Nitish Kumar",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop&face=auto",
+    subhead: "Chief Minister & Political Veteran"
+  },
+  chirag: { 
+    data: chiragData, 
+    fullName: "Chirag Paswan",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=300&fit=crop&face=auto",
+    subhead: "Young Leader & Alliance Builder"
+  },
+  prashant: { 
+    data: prashantData, 
+    fullName: "Prashant Kishor",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=300&fit=crop&face=auto",
+    subhead: "Political Strategist & Reformer"
+  },
+  tejashwi: { 
+    data: tejashwiData, 
+    fullName: "Tejashwi Yadav",
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=300&fit=crop&face=auto",
+    subhead: "Deputy CM & Youth Icon"
+  }
 }
 
 function App() {
@@ -32,12 +51,22 @@ function App() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 gap-6">
             {Object.entries(gameDataMap).map(([key, gameInfo]) => (
               <div key={key} className="bg-gray-100 rounded-xl p-6 hover:bg-gray-200 transition-colors cursor-pointer" onClick={() => setSelectedGame(key)}>
                 <div className="text-center">
-                  <span className="material-icons text-gray-900 text-4xl mb-4 block">person</span>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-6">{gameInfo.fullName}</h3>
+                  <div className="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden">
+                    <img 
+                      src={gameInfo.image} 
+                      alt={gameInfo.fullName}
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik00MCA0NkM0OC4yODQzIDQ2IDU1IDM5LjI4NDMgNTUgMzFDNTUgMjIuNzE1NyA0OC4yODQzIDE2IDQwIDE2QzMxLjcxNTcgMTYgMjUgMjIuNzE1NyAyNSAzMUMyNSAzOS4yODQzIDMxLjcxNTcgNDYgNDAgNDZaIiBmaWxsPSIjOUI5Q0EwIi8+CjxwYXRoIGQ9Ik00MCA0OEM0Ni42Mjc0IDQ4IDUyIDUzLjM3MjYgNTIgNjBWNjRINjhWNjBDNjggNDQuNTM2IDU1LjQ2NCAzMiA0MCAzMkMyNC41MzYgMzIgMTIgNDQuNTM2IDEyIDYwVjY0SDI4VjYwQzI4IDUzLjM3MjYgMzMuMzcyNiA0OCA0MCA0OFoiIGZpbGw9IiM5QjlDQTAiLz4KPC9zdmc+';
+                      }}
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{gameInfo.fullName}</h3>
+                  <p className="text-sm text-gray-600 mb-4">{gameInfo.subhead}</p>
                   <button className="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
                     Start Campaign
                   </button>
@@ -255,15 +284,6 @@ function GameComponent({ gameData, candidateName, onBack }) {
             <span className="material-icons text-white text-lg sm:text-xl md:text-2xl">how_to_vote</span>
             <h1 className="text-base sm:text-lg md:text-xl font-semibold text-white">Bihar Election</h1>
           </div>
-          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 md:gap-4 w-full sm:w-auto">
-            <span className="text-gray-400 text-xs sm:text-sm">Decision {choiceHistory.length + 1}</span>
-            <div className="w-full sm:w-40 md:w-48 lg:w-64 bg-gray-700 rounded-full h-2">
-              <div 
-                className="bg-white h-2 rounded-full transition-all duration-500" 
-                style={{ width: `${progress}%` }}
-              ></div>
-            </div>
-          </div>
         </div>
       </header>
 
@@ -286,10 +306,10 @@ function GameComponent({ gameData, candidateName, onBack }) {
 
             {/* Choices */}
             <div className="space-y-2 sm:space-y-3 md:space-y-4">
-              <div className="bg-black p-3 sm:p-4 rounded-lg mb-4 sm:mb-6">
+              <div className="mb-4 sm:mb-6">
                 <div className="flex items-center gap-2">
-                  <span className="material-icons text-white text-lg">decision_tree</span>
-                  <h3 className="font-semibold text-white text-base">Your Options</h3>
+                  <span className="material-icons text-black text-lg">decision_tree</span>
+                  <h3 className="font-semibold text-black text-base text-left">Your Options</h3>
                 </div>
               </div>
               {node.options?.map((option, index) => (
