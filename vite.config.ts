@@ -4,7 +4,9 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: process.env.NODE_ENV === 'production' 
-    ? 'https://testingtoi-simulationroom.vercel.app/' 
-    : '/',
+  base: process.env.VITE_LOCAL_PREVIEW === 'true' 
+    ? '/' 
+    : (process.env.NODE_ENV === 'production' 
+        ? 'https://testingtoi-simulationroom.vercel.app/' 
+        : '/'),
 })
