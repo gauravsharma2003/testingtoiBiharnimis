@@ -46,14 +46,14 @@ const CTAButton = ({
         onTouchEnd={() => setPressed(false)}
         onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setPressed(true) }}
         onKeyUp={(e) => { if (e.key === 'Enter' || e.key === ' ') setPressed(false) }}
-        className={`relative w-full px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-xl border-2 font-semibold text-sm sm:text-base md:text-lg ${variantStyles.bg} ${variantStyles.text} ${variantStyles.border} flex items-center justify-center gap-2 sm:gap-3 transition-transform duration-150 ease-out ${pressed ? 'translate-x-1.5 translate-y-1.5' : ''}`}
+        className={`relative w-full px-2 xs:px-3 sm:px-4 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-4 rounded-xl border-2 font-semibold text-xs xs:text-sm sm:text-base md:text-lg whitespace-nowrap ${variantStyles.bg} ${variantStyles.text} ${variantStyles.border} flex items-center justify-center gap-1 xs:gap-2 sm:gap-3 transition-transform duration-150 ease-out ${pressed ? 'translate-x-1.5 translate-y-1.5' : ''}`}
         style={{ 
           zIndex: 10 
         }}
         onClick={onClick}
         {...props}
       >
-        {icon && <span className="material-icons text-sm sm:text-base">{icon}</span>}
+        {icon && <span className="material-icons text-xs xs:text-sm sm:text-base">{icon}</span>}
         <span className="pointer-events-none">{children}</span>
       </button>
     </div>
