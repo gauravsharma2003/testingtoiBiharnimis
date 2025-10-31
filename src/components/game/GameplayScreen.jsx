@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import { trackUserShown } from '../../utils/analytics'
 
 const GameplayScreen = ({ 
   currentNode, 
@@ -7,6 +8,14 @@ const GameplayScreen = ({
   onBack 
 }) => {
   const progress = Math.min((choiceHistory.length / 5) * 100, 100)
+  const hasTrackedRef = useRef(false)
+  
+  useEffect(() => {
+    if (!hasTrackedRef.current) {
+      hasTrackedRef.current = true
+      trackUserShown({ page_template: 'gameplay', section: 'toisimulationroom' })
+    }
+  }, [])
 
   return (
     <div className="w-full min-h-screen bg-white flex flex-col">

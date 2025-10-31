@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { JSON_BASE_URL, GAME_DATA_CONFIG } from '../../constants/gameData'
-import { trackCharacterSelect } from '../../utils/analytics'
+import { trackUserClick, trackUserShown } from '../../utils/analytics'
 import { LoadingSpinner, ErrorMessage } from '../shared/LoadingStates'
 import CandidateCard from '../shared/CandidateCard'
 
@@ -10,7 +10,14 @@ const LandingPage = () => {
   const [gameDataMap, setGameDataMap] = useState(null)
   const [loading, setLoading] = useState(true)
 
+  const hasTrackedRef = useRef(false)
   useEffect(() => {
+    if (!hasTrackedRef.current) {
+      hasTrackedRef.current = true
+      // Screen view
+      trackUserShown({ page_template: 'listing', section: 'toisimulationroom' })
+    }
+
     const loadGameData = async () => {
       try {
         const [nitishData, prashantData, tejashwiData] = await Promise.all([
@@ -35,7 +42,7 @@ const LandingPage = () => {
   }, [])
 
   const handleCharacterSelect = (key, fullName) => {
-    trackCharacterSelect(fullName)
+    trackUserClick({ label: 'select_character', type: `${key}_widget` })
     navigate(`/${key}`)
   }
 

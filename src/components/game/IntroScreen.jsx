@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import { trackUserShown } from '../../utils/analytics'
 import CTAButton from '../shared/CTAButton'
 
-const IntroScreen = ({ candidateName, onBack, onStart }) => {
+const IntroScreen = ({ candidateName, candidateKey, onBack, onStart }) => {
+  const hasTrackedRef = useRef(false)
+  useEffect(() => {
+    if (!hasTrackedRef.current) {
+      hasTrackedRef.current = true
+      trackUserShown({ page_template: 'splash', section: 'toisimulationroom', level: `${candidateKey}_widget`, browisng_platform: 'web' })
+    }
+  }, [])
   return (
     <div className="w-full min-h-screen bg-white flex flex-col">
       <div className="flex-1 flex flex-col lg:flex-row">

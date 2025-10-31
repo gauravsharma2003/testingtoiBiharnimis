@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { trackReturnToMenu, trackRestart } from '../../utils/analytics'
+import { trackUserClick, trackUserShown } from '../../utils/analytics'
 import CTAButton from '../shared/CTAButton'
 import ShareCard from '../shared/ShareCard'
 
@@ -14,6 +14,14 @@ const ResultScreen = ({
 }) => {
   const navigate = useNavigate()
   const [isSharing, setIsSharing] = useState(false)
+  const hasTrackedRef = useRef(false)
+
+  useEffect(() => {
+    if (!hasTrackedRef.current) {
+      hasTrackedRef.current = true
+      trackUserShown({ page_template: 'result', section: 'toisimulationroom' })
+    }
+  }, [])
 
   const handleShare = () => {
     // Prevent multiple clicks
@@ -25,12 +33,12 @@ const ResultScreen = ({
   }
 
   const handleBackToMenu = () => {
-    trackReturnToMenu(candidateKey, nodeData.text)
+    trackUserClick({ label: 'return_to_menu' })
     onBackToMenu()
   }
 
   const handlePlayAgain = () => {
-    trackRestart(candidateKey, nodeData.text)
+    trackUserClick({ label: 'restart' })
     onPlayAgain()
   }
 

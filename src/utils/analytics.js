@@ -1,46 +1,36 @@
 export const trackEvent = (eventName, eventData) => {
-  console.log(`GA Event: ${eventName}`, eventData)
   if (window.gtag) {
     window.gtag('event', eventName, eventData)
+    console.log(`GA Event: ${eventName}`, eventData)
+
   }
 }
 
-export const trackCharacterSelect = (characterName) => {
-  trackEvent('character_select', { character_name: characterName })
+export const trackUserShown = (params = {}) => {
+  const payload = {
+    type: params.type, // e.g., <game_name>_widget
+    page_template: params.page_template, // e.g., listing
+    section: params.section, // e.g., games
+    subsection: params.subsection, // e.g., N/A
+    browsing_platform: params.browsing_platform, // web/mweb/pwa
+    game_id: params.game_id, // e.g., N/A
+    level: params.level, // e.g., N/A
+    game_of_the_day: params.game_of_the_day // e.g., N/A
+  }
+  trackEvent('user_shown', payload)
 }
 
-export const trackGameStart = (characterName) => {
-  trackEvent('game_start', { character_name: characterName })
-}
-
-export const trackMakeChoice = (characterName, decisionNumber, nodeId, choiceText, nextNodeId) => {
-  trackEvent('make_choice', {
-    character_name: characterName,
-    decision_number: decisionNumber,
-    node_id: nodeId,
-    choice_text: choiceText,
-    next_node_id: nextNodeId
-  })
-}
-
-export const trackGameComplete = (characterName, resultType, endingId, finalPublicApproval, playDurationSeconds) => {
-  trackEvent('game_complete', {
-    character_name: characterName,
-    result_type: resultType,
-    ending_id: endingId,
-    final_public_approval: finalPublicApproval,
-    play_duration_seconds: playDurationSeconds
-  })
-}
-
-export const trackRestart = (characterName) => {
-  trackEvent('restart', { character_name: characterName })
-}
-
-export const trackReturnToMenu = (fromScreen, decisionNumberAtExit, characterName) => {
-  trackEvent('return_to_menu', {
-    from_screen: fromScreen,
-    decision_number_at_exit: decisionNumberAtExit,
-    character_name: characterName
-  })
+export const trackUserClick = (params = {}) => {
+  const payload = {
+    type: params.type, // e.g., <game_name>_widget
+    label: params.label, // e.g., play_now / share
+    page_template: params.page_template, // e.g., listing
+    section: params.section, // e.g., games
+    subsection: params.subsection, // e.g., N/A
+    browsing_platform: params.browsing_platform, // web/mweb/pwa
+    game_id: params.game_id, // e.g., N/A
+    level: params.level, // e.g., N/A
+    game_of_the_day: params.game_of_the_day // e.g., N/A
+  }
+  trackEvent('user_click', payload)
 }

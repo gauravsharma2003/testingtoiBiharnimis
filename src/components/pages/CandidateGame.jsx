@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { GAME_DATA_CONFIG } from '../../constants/gameData'
-import { trackGameStart, trackMakeChoice, trackGameComplete } from '../../utils/analytics'
+import { trackUserClick } from '../../utils/analytics'
 import { LoadingSpinner, ErrorMessage } from '../shared/LoadingStates'
 import IntroScreen from '../game/IntroScreen'
 import GameplayScreen from '../game/GameplayScreen'
@@ -72,7 +72,7 @@ const CandidateGame = () => {
   const handleStartGame = () => {
     setGameStarted(true)
     setStartTime(Date.now())
-    trackGameStart(candidateKey)
+    trackUserClick({ label: 'play_now', type: `${candidateKey}_widget` })
   }
 
   const handleChoice = (nextNode) => {
@@ -86,14 +86,14 @@ const CandidateGame = () => {
       timestamp: Date.now()
     }])
     
-    trackMakeChoice(candidateKey, currentNode, nextNode, choiceText)
+    trackUserClick({ label: 'make_choice', page_template: 'gameplay', section: 'toisimulationroom', level: `${candidateKey}_widget`, browisng_platform: 'web' })
     
     setCurrentNode(nextNode)
     
     const nextNodeData = gameData.nodes[nextNode]
     if (nextNodeData?.isEnding) {
       const elapsedTime = Date.now() - startTime
-      trackGameComplete(candidateKey, nextNode, choiceHistory.length + 1, elapsedTime)
+      trackUserClick({ label: 'game_complete' })
     }
   }
 
@@ -139,6 +139,7 @@ const CandidateGame = () => {
     return (
       <IntroScreen 
         candidateName={GAME_DATA_CONFIG[candidateKey].name}
+        candidateKey={candidateKey}
         onBack={handleBackFromIntro}
         onStart={handleStartGame}
       />
