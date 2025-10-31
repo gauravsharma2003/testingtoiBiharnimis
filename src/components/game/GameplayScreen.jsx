@@ -20,18 +20,19 @@ const GameplayScreen = ({
   return (
     <div className="w-full min-h-screen bg-white flex flex-col">
       {/* Header */}
-      <header className="bg-black px-3 sm:px-4 md:px-6 lg:px-8 py-3 sm:py-4 md:py-6">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
-          <div className="flex items-center gap-2 sm:gap-3">
-            <button 
-              onClick={onBack}
-              className="flex items-center gap-1 text-gray-400 hover:text-white transition-colors"
-            >
-              <span className="material-icons text-lg">arrow_back</span>
-            </button>
-            <span className="material-icons text-white text-lg sm:text-xl md:text-2xl">how_to_vote</span>
-            <h1 className="text-base sm:text-lg md:text-xl font-semibold text-white">Bihar Election</h1>
+      <header className="bg-white px-3 sm:px-4 md:px-6 lg:px-8 py-3 sm:py-4 md:py-6 shadow-md">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-3 sm:gap-4">
+          <button 
+            onClick={onBack}
+            className="h-10 w-10 rounded-full border border-gray-300 flex items-center justify-center bg-white hover:bg-gray-50 transition"
+          >
+            <span className="material-icons text-gray-700">arrow_back</span>
+          </button>
+          <div className="flex items-center gap-2">
+            <img src="https://static.toiimg.com/photo/124997104.cms" alt="" className="h-8 w-auto inline-block" />
+            <span className="text-gray-900 text-sm font-medium whitespace-nowrap">Simulation Room : Bihar election</span>
           </div>
+          <div className="w-10"></div>
         </div>
       </header>
 
