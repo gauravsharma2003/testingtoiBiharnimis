@@ -6,21 +6,27 @@ export const GAME_DATA_CONFIG = {
     fullName: "Nitish Kumar (NDA)",
     image: "https://cimp.ac.in/wp-content/uploads/2024/06/CM-Nitish-Kumar-1.png",
     subhead: "Chief Minister & Political Veteran",
-    url: `${JSON_BASE_URL}/nitish.json`
+    url: `${JSON_BASE_URL}/nitish.json`,
+    splashimage: "https://static.toiimg.com/photo/124991855.cms",
+    listingimage : "https://static.toiimg.com/photo/124993239.cms"
   },
   prashant: { 
     name: "Prashant Kishor (JS)",
     fullName: "Prashant Kishor (JS)",
     image: "https://pnglove.com/data/img/1142_pMyO.jpg",
     subhead: "Political Strategist & Reformer",
-    url: `${JSON_BASE_URL}/prashant.json`
+    url: `${JSON_BASE_URL}/prashant.json`,
+    splashimage: "https://static.toiimg.com/photo/124993250.cms",
+    listingimage : "https://static.toiimg.com/photo/124991850.cms"
   },
   tejashwi: { 
     name: "Tejashwi Yadav (MG)",
     fullName: "Tejashwi Yadav (MG)",
     image: "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202112/5-l-Tejashwi.jpg?size=690:388",
     subhead: "Deputy CM & Youth Icon",
-    url: `${JSON_BASE_URL}/tejashwi.json`
+    url: `${JSON_BASE_URL}/tejashwi.json`,
+    splashimage: "https://static.toiimg.com/photo/124993243.cms",
+    listingimage : "https://static.toiimg.com/photo/124991847.cms"
   }
 }
 
