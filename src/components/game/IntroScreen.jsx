@@ -36,10 +36,10 @@ const IntroScreen = ({ candidateName, candidateKey, onBack, onStart }) => {
         <div className="max-w-4xl w-full text-center">
           <div className="mb-6 sm:mb-8 lg:mb-12">
             <h1 className="font-bold text-gray-900 mb-3 sm:mb-4 md:mb-6 leading-tight">
-              <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-1">Play as</div>
-              <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl whitespace-nowrap">{candidateName}</div>
+              <div className="text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl mb-1">Play as</div>
+              <div className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl whitespace-nowrap">{candidateName}</div>
             </h1>
-            <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 mb-4 sm:mb-6 lg:mb-8 font-medium">
+            <h2 className="text-base sm:text-lg md:text-xl lg:text-xl xl:text-xl text-gray-700 mb-4 sm:mb-6 lg:mb-8 font-medium">
               Play as {candidateName} and create your election strategy. Choose your actions wisely and lead your campaign toward success
             </h2>
           </div>
