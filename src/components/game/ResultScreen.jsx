@@ -127,7 +127,16 @@ const ResultScreen = ({
         <div className="w-full px-3 sm:px-4">
           {/* Mobile Layout */}
           <div className="flex lg:hidden gap-3 items-center justify-between">
-            {/* Share Button - Takes most width */}
+            {/* Share Button */}
+
+            <CTAButton 
+              onClick={handlePlayAgain}
+              icon="refresh"
+              className="flex-1"
+            >
+              Play Again
+            </CTAButton>
+            
             <CTAButton 
               onClick={handleShare}
               icon="share"
@@ -136,58 +145,21 @@ const ResultScreen = ({
               SHARE
             </CTAButton>
             
-            {/* Back Icon Button - Rounded with 3D effect
-            <div className="relative" style={{ paddingRight: '6px', paddingBottom: '6px' }}>
-              <div
-                aria-hidden
-                className="absolute top-0 left-0 right-1.5 bottom-1.5 rounded-full bg-[#111827]"
-                style={{ transform: "translate(6px, 6px)" }}
-              />
-              <button
-                onClick={handleBackToMenu}
-                className="relative flex items-center justify-center w-12 h-12 rounded-full bg-[#fffdf8] border-2 border-[#111827] transition-transform hover:translate-x-1.5 hover:translate-y-1.5"
-                aria-label="Back to menu"
-              >
-                <span className="material-icons text-gray-900">arrow_back</span>
-              </button>
-            </div> */}
-            
-            {/* Play Again Icon Button - Rounded with 3D effect */}
-            <div className="relative" style={{ paddingRight: '6px', paddingBottom: '6px' }}>
-              <div
-                aria-hidden
-                className="absolute top-0 left-0 right-1.5 bottom-1.5 rounded-full bg-[#111827]"
-                style={{ transform: "translate(6px, 6px)" }}
-              />
-              <button
-                onClick={handlePlayAgain}
-                className="relative flex items-center justify-center w-12 h-12 rounded-full bg-[#fffdf8] border-[0.5px] border-[#111827] transition-transform hover:translate-x-1.5 hover:translate-y-1.5"
-                aria-label="Play again"
-              >
-                <span className="material-icons text-gray-900">refresh</span>
-              </button>
-            </div>
+            {/* Play Again Button */}
+
           </div>
 
           {/* Desktop Layout */}
           <div className="hidden lg:flex gap-4 items-center justify-center">
-            {/* Back Icon Button - Rounded with 3D effect */}
-            <div className="relative" style={{ paddingRight: '6px', paddingBottom: '6px' }}>
-              <div
-                aria-hidden
-                className="absolute top-0 left-0 right-1.5 bottom-1.5 rounded-full bg-[#111827]"
-                style={{ transform: "translate(6px, 6px)" }}
-              />
-              {/* <button
-                onClick={handleBackToMenu}
-                className="relative flex items-center justify-center w-14 h-14 rounded-full bg-[#fffdf8] border-[0.5px] border-[#111827] transition-transform hover:translate-x-1.5 hover:translate-y-1.5"
-                aria-label="Back to menu"
-              >
-                <span className="material-icons text-gray-900 text-2xl">arrow_back</span>
-              </button> */}
-            </div>
-            
             {/* Share Button */}
+
+            <CTAButton 
+              onClick={handlePlayAgain}
+              icon="refresh"
+            >
+              Play Again
+            </CTAButton>
+
             <CTAButton 
               onClick={handleShare}
               icon="share"
@@ -195,13 +167,8 @@ const ResultScreen = ({
               SHARE
             </CTAButton>
             
-            {/* Play Again Button with Text */}
-            <CTAButton 
-              onClick={handlePlayAgain}
-              icon="refresh"
-            >
-              PLAY AGAIN
-            </CTAButton>
+            {/* Play Again Button */}
+
           </div>
         </div>
       </main>
