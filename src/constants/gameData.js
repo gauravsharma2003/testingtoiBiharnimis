@@ -15,7 +15,7 @@ export const GAME_DATA_CONFIG = {
     name: "Prashant Kishor",
     fullName: "Prashant Kishor from Jan Suraaj",
     image: "https://pnglove.com/data/img/1142_pMyO.jpg",
-    subhead: "Political Strategist & Reformer",
+    subhead: "Political Strategist",
     url: `${JSON_BASE_URL}/prashant.json`,
     splashimage: "https://static.toiimg.com/photo/124993250.cms",
     listingimage : "https://static.toiimg.com/photo/124996580.cms",
@@ -29,7 +29,7 @@ export const GAME_DATA_CONFIG = {
     url: `${JSON_BASE_URL}/tejashwi.json`,
     splashimage: "https://static.toiimg.com/photo/124993243.cms",
     listingimage : "https://static.toiimg.com/photo/124996579.cms",
-    partyname: "Rashtriya Janata Dal"
+    partyname: "Mahagathbandhan"
   }
 }
 
