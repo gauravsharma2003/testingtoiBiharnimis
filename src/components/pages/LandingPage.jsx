@@ -4,6 +4,7 @@ import { JSON_BASE_URL, GAME_DATA_CONFIG } from '../../constants/gameData'
 import { trackUserClick, trackUserShown } from '../../utils/analytics'
 import { LoadingSpinner, ErrorMessage } from '../shared/LoadingStates'
 import CandidateCard from '../shared/CandidateCard'
+import Footer from '../shared/Footer'
 
 const LandingPage = () => {
   const navigate = useNavigate()
@@ -76,6 +77,7 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }
