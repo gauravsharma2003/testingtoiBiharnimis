@@ -2,31 +2,34 @@ export const JSON_BASE_URL = 'https://testingtoi-simulationroom.vercel.app/json'
 
 export const GAME_DATA_CONFIG = {
   nitish: { 
-    name: "Nitish Kumar (NDA)",
-    fullName: "Nitish Kumar (NDA)",
+    name: "Nitish Kumar",
+    fullName: "Nitish Kumar from NDA",
     image: "https://cimp.ac.in/wp-content/uploads/2024/06/CM-Nitish-Kumar-1.png",
     subhead: "Chief Minister & Political Veteran",
     url: `${JSON_BASE_URL}/nitish.json`,
     splashimage: "https://static.toiimg.com/photo/124991855.cms",
-    listingimage : "https://static.toiimg.com/photo/124993239.cms"
+    listingimage : "https://static.toiimg.com/photo/124996581.cms",
+    partyname: "NDA"
   },
   prashant: { 
-    name: "Prashant Kishor (JS)",
-    fullName: "Prashant Kishor (JS)",
+    name: "Prashant Kishor",
+    fullName: "Prashant Kishor from Jan Suraaj",
     image: "https://pnglove.com/data/img/1142_pMyO.jpg",
     subhead: "Political Strategist & Reformer",
     url: `${JSON_BASE_URL}/prashant.json`,
     splashimage: "https://static.toiimg.com/photo/124993250.cms",
-    listingimage : "https://static.toiimg.com/photo/124991850.cms"
+    listingimage : "https://static.toiimg.com/photo/124996580.cms",
+    partyname: "Jan Suraaj"
   },
   tejashwi: { 
-    name: "Tejashwi Yadav (MG)",
-    fullName: "Tejashwi Yadav (MG)",
+    name: "Tejashwi Yadav",
+    fullName: "Tejashwi Yadav from Rashtriya Janata Dal",
     image: "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202112/5-l-Tejashwi.jpg?size=690:388",
-    subhead: "Deputy CM & Youth Icon",
+    subhead: "Youth Icon & opposition leader",
     url: `${JSON_BASE_URL}/tejashwi.json`,
     splashimage: "https://static.toiimg.com/photo/124993243.cms",
-    listingimage : "https://static.toiimg.com/photo/124991847.cms"
+    listingimage : "https://static.toiimg.com/photo/124996579.cms",
+    partyname: "Rashtriya Janata Dal"
   }
 }
 

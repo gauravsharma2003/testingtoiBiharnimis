@@ -59,13 +59,9 @@ const LandingPage = () => {
       <div className="flex-1 flex items-center justify-center p-4">
         <div className="max-w-6xl w-full">
           <div className="text-center mb-12">
-            <span className="material-icons text-gray-900 text-6xl mb-6 block">how_to_vote</span>
-            <h1 className="text-5xl font-bold text-gray-900 mb-4">Bihar Election</h1>
-            <h2 className="text-2xl text-gray-700 mb-6">Choose Your Perspective</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Experience the final weeks of Bihar's high-stakes political campaign from different viewpoints. 
-              Each perspective offers a unique journey through the complex world of Indian politics.
-            </p>
+            <span className="text-gray-900 text-base mb-6 flex items-center justify-center gap-2">Bihar Elections with <img src="https://static.toiimg.com/photo/124997104.cms" alt="" className="h-10 w-auto inline-block" /> </span>
+            <h1 className="text-5xl font-extrabold text-gray-950 mb-4">Dance of Democracy</h1>
+            <h2 className="text-2xl text-gray-700 mb-6">Choose Your Perspective: Explore Bihar’s campaign through concise, distinct viewpoints.</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
