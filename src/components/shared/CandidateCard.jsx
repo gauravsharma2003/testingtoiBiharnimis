@@ -20,9 +20,9 @@ const CandidateCard = ({ candidateKey, gameInfo, onSelect }) => {
       {/* Left-aligned content below */}
       <div className="p-6 border-l border-r border-b border-gray-300 rounded-b-xl w-full">
         <h3 className="text-xl font-semibold text-gray-900 mb-2 whitespace-nowrap truncate">{gameInfo.name}</h3>
-        <p className="text-sm text-gray-800 mb-3 line-clamp-2">{gameInfo.partyname}</p>
-        <hr className="border-t border-gray-300 my-3 mx-1" />
-        <p className="text-sm text-gray-600 mb-4 line-clamp-2">{gameInfo.subhead}</p>
+        <p className="text-sm text-gray-800 mb-3 line-clamp-2">{gameInfo.subhead}</p>
+        <hr className="border-t border-gray-300 my-3 mx-0.5" />
+        <p className="text-sm text-gray-600 mb-4 line-clamp-2">{gameInfo.partyname}</p>
         <CTAButton 
           onClick={(e) => {
             e.stopPropagation()

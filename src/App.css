@@ -55,7 +55,7 @@ button:focus-visible {
     margin: 0 !important;
     padding: 0 !important;
     font-size: 16px !important;
-    font-weight: 600 !important;
+    /* font-weight: 600 !important; */
   }
   
   /* Fix Material Icons sizing */
