@@ -60,21 +60,19 @@ const ResultScreen = ({
   return (
     <div className="w-full min-h-screen bg-white flex flex-col">
       {/* Header */}
-      <header className="bg-black px-3 sm:px-4 md:px-6 lg:px-8 py-3 sm:py-4 md:py-6">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
-          <div 
-            className="flex items-center gap-2 sm:gap-3 cursor-pointer hover:opacity-80 transition-opacity"
+      <header className="bg-white px-3 sm:px-4 md:px-6 lg:px-8 py-3 sm:py-4 md:py-6 shadow-md">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-3 sm:gap-4">
+          <button 
             onClick={() => navigate('/')}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => e.key === 'Enter' && navigate('/')}
+            className="h-10 w-10 rounded-full border border-gray-300 flex items-center justify-center bg-white hover:bg-gray-50 transition"
           >
-            <span className="material-icons text-white text-lg sm:text-xl md:text-2xl">how_to_vote</span>
-            <h1 className="text-base sm:text-lg md:text-xl font-semibold text-white">Bihar Election</h1>
+            <span className="material-icons text-gray-700">arrow_back</span>
+          </button>
+          <div className="flex items-center gap-2">
+            <img src="https://static.toiimg.com/photo/124997104.cms" alt="" className="h-8 w-auto inline-block" />
+            <span className="text-gray-900 text-sm font-medium whitespace-nowrap">Simulation Room : Bihar election</span>
           </div>
-          <div className="w-full sm:w-48 md:w-56 lg:w-64 bg-gray-700 rounded-full h-2">
-            <div className="bg-white h-2 rounded-full w-full"></div>
-          </div>
+          <div className="w-10"></div>
         </div>
       </header>
 
@@ -138,7 +136,7 @@ const ResultScreen = ({
               SHARE
             </CTAButton>
             
-            {/* Back Icon Button - Rounded with 3D effect */}
+            {/* Back Icon Button - Rounded with 3D effect
             <div className="relative" style={{ paddingRight: '6px', paddingBottom: '6px' }}>
               <div
                 aria-hidden
@@ -152,7 +150,7 @@ const ResultScreen = ({
               >
                 <span className="material-icons text-gray-900">arrow_back</span>
               </button>
-            </div>
+            </div> */}
             
             {/* Play Again Icon Button - Rounded with 3D effect */}
             <div className="relative" style={{ paddingRight: '6px', paddingBottom: '6px' }}>
@@ -180,13 +178,13 @@ const ResultScreen = ({
                 className="absolute top-0 left-0 right-1.5 bottom-1.5 rounded-full bg-[#111827]"
                 style={{ transform: "translate(6px, 6px)" }}
               />
-              <button
+              {/* <button
                 onClick={handleBackToMenu}
                 className="relative flex items-center justify-center w-14 h-14 rounded-full bg-[#fffdf8] border-[0.5px] border-[#111827] transition-transform hover:translate-x-1.5 hover:translate-y-1.5"
                 aria-label="Back to menu"
               >
                 <span className="material-icons text-gray-900 text-2xl">arrow_back</span>
-              </button>
+              </button> */}
             </div>
             
             {/* Share Button */}
