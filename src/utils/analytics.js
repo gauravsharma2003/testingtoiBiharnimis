@@ -1,7 +1,7 @@
 export const trackEvent = (eventName, eventData) => {
   if (window.gtag) {
     window.gtag('event', eventName, eventData)
-    console.log(`GA Event: ${eventName}`, eventData)
+    // console.log(`GA Event: ${eventName}`, eventData)
 
   }
 }
