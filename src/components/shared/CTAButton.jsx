@@ -27,6 +27,23 @@ const CTAButton = ({
 
   const variantStyles = variants[variant] || variants.primary
 
+  const handleClick = (e) => {
+    // Set pressed state immediately to show animation
+    setPressed(true)
+    
+    // Reset pressed state after animation completes
+    setTimeout(() => {
+      setPressed(false)
+    }, 150)
+    
+    // Call onClick after delay
+    if (onClick) {
+      setTimeout(() => {
+        onClick(e)
+      }, 400)
+    }
+  }
+
   return (
     <div className={`relative ${className}`} style={{ paddingRight: '10px', paddingBottom: '10px' }}>
       <div
@@ -50,7 +67,7 @@ const CTAButton = ({
         style={{ 
           zIndex: 10 
         }}
-        onClick={onClick}
+        onClick={handleClick}
         {...props}
       >
         {icon && <span className="material-icons text-xs xs:text-sm sm:text-base">{icon}</span>}
