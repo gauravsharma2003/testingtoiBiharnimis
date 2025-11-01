@@ -62,17 +62,16 @@ const ResultScreen = ({
         return;
       }
 
-      // Get result text for share message
-      const resultMatch = nodeData.text.match(
-        /^(VICTORY!|DEFEAT|NARROW VICTORY|LANDSLIDE VICTORY|NARROW DEFEAT|PYRRHIC VICTORY)/
-      );
-      const result = resultMatch ? resultMatch[1] : "RESULT";
-
       // Capitalize first letter of candidate name
       const capitalizedCandidate = candidateKey.charAt(0).toUpperCase() + candidateKey.slice(1);
 
-      // Determine share text based on victory or defeat
-      const isVictory = result.includes("VICTORY");
+      // Determine share text based on public approval from stats
+      const publicApproval = nodeData.stats?.publicApproval || nodeData.stats?.["Public Approval"] || 0;
+      const approvalValue = typeof publicApproval === 'string' 
+        ? parseFloat(publicApproval.replace('%', '')) 
+        : publicApproval;
+      
+      const isVictory = approvalValue > 50;
       const shareText = isVictory
         ? `I just played the TOI Bihar Election Simulation Game as ${capitalizedCandidate} — VICTORY! 🏆🎉\n👉🏻Try it here:`
         : `I just played the Bihar Election Simulation Game as ${capitalizedCandidate} — and I almost won.⭐️\n\n👉🏻Try it here:`;
