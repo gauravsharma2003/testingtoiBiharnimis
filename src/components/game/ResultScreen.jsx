@@ -67,7 +67,14 @@ const ResultScreen = ({
       );
       const result = resultMatch ? resultMatch[1] : "RESULT";
 
-      const shareText = `I just played the Bihar Election Simulation Game as ${candidateKey}!\n\n${result}\n\nTry it out here`;
+      // Capitalize first letter of candidate name
+      const capitalizedCandidate = candidateKey.charAt(0).toUpperCase() + candidateKey.slice(1);
+
+      // Determine share text based on victory or defeat
+      const isVictory = result.includes("VICTORY");
+      const shareText = isVictory
+        ? `I just played the TOI Bihar Election Simulation Game as ${capitalizedCandidate} — VICTORY! 🏆🎉\n👉🏻Try it here:`
+        : `I just played the Bihar Election Simulation Game as ${capitalizedCandidate} — and I almost won.⭐️\n\n👉🏻Try it here:`;
 
       // Check if Web Share API is supported
       if (navigator.share) {
