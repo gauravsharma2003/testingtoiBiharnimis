@@ -1,0 +1,944 @@
+{
+  "name": "Bihar Election: The Final Countdown",
+  "startNode": "q1_opening_gambit",
+  "nodes": {
+    "q1_opening_gambit": {
+      "text": "As the final weeks of the 2025 Bihar election commence, the polls are neck and neck. Your core team presents two divergent strategies for the opening gambit. Which path will you, Tejashwi Yadav, choose to break the deadlock?",
+      "options": [
+        {
+          "text": "Focus on a forward-looking 'Jobs and Development' agenda. Target youth and undecided voters with promises of 1 million tech jobs and new investment, using a sophisticated digital and social media campaign.",
+          "nextNode": "q2a_corruption_scandal"
+        },
+        {
+          "text": "Double down on 'Social Justice.' Make the demand for a comprehensive Caste Census your central plank and aggressively attack the government on the controversial SIR voter roll revision, aiming to consolidate your core M-Y (Muslim-Yadav) and backward caste vote base.",
+          "nextNode": "q2b_pk_threat"
+        }
+      ]
+    },
+    "q2a_corruption_scandal": {
+      "text": "Your 'Jobs' message is gaining traction with the youth. Suddenly, a central agency reopens an old land-for-jobs case involving your family. The NDA launches a ferocious 'Jungle Raj 2.0' media blitz, accusing you of corruption. How do you respond to this crisis?",
+      "options": [
+        {
+          "text": "Dismiss it as a predictable, politically-motivated attack by the central government to divert attention from real issues like unemployment. Immediately pivot back to your development agenda.",
+          "nextNode": "q3a1_resource_allocation"
+        },
+        {
+          "text": "Launch a direct counter-attack. Hold a press conference detailing recent corruption allegations against NDA ministers in Bihar, turning the debate from your past to their present.",
+          "nextNode": "q3a2_internal_dissent"
+        }
+      ]
+    },
+    "q2b_pk_threat": {
+      "text": "Your 'Social Justice' campaign has solidified your base, but an unexpected threat emerges. Prashant Kishor's Jan Suraaj party begins to attract a noticeable chunk of EBC (Extremely Backward Classes) voters with a compelling message of '30 years of failed caste politics.' How do you neutralize this threat?",
+      "options": [
+        {
+          "text": "Ignore Prashant Kishor publicly. Frame the election as a direct fight between you and the NDA, arguing that a vote for a third party is a wasted vote that helps the BJP.",
+          "nextNode": "q3b1_alliance_demands"
+        },
+        {
+          "text": "Personally attack Prashant Kishor. Brand him as a 'political consultant for hire' and an agent of the BJP, questioning the source of his party's massive funding to create suspicion among voters.",
+          "nextNode": "q3b2_media_backlash"
+        },
+        {
+          "text": "Adapt your message. While keeping social justice at the core, incorporate themes of good governance and systemic reform to show you offer more than just traditional caste politics.",
+          "nextNode": "q3b3_left_wing_pressure"
+        }
+      ]
+    },
+    "q3a1_resource_allocation": {
+      "text": "Your deflection of the corruption charge was successful, but campaign finances are now critically low. Your coalition partners, particularly the Congress and Left parties, are demanding a major fund infusion for their 60+ seats, many of which your internal surveys show are unwinnable. What is your decision?",
+      "options": [
+        {
+          "text": "Allocate funds pragmatically. Prioritize resources for the RJD's high-potential seats and provide only token support to allies in their weaker constituencies, risking a public fallout.",
+          "nextNode": "q4a1a_debate_challenge"
+        },
+        {
+          "text": "Maintain alliance unity at all costs. Divert a significant portion of your remaining funds to allies, hoping their ground campaigns can create an upset, even if it weakens your own party's efforts elsewhere.",
+          "nextNode": "q4a1b_rally_focus"
+        }
+      ]
+    },
+    "q3a2_internal_dissent": {
+      "text": "Your counter-attack on NDA corruption has fired up your base, but it has alienated some senior, old-guard leaders within the RJD. They privately complain that this 'mud-slinging' reminds voters of the 'Jungle Raj' era and harms the party's image. They are threatening to run lukewarm campaigns in their home districts.",
+      "options": [
+        {
+          "text": "Call an urgent meeting with the dissenters. Acknowledge their concerns and assure them this is a short-term tactical response, promising a return to a positive development agenda in the final week.",
+          "nextNode": "q4a2a_interview_soften"
+        },
+        {
+          "text": "Assert your authority. Bypass the senior leaders and empower their younger, more aggressive deputies in the youth wing to take charge of campaigning in those districts, sending a clear message about who is in control.",
+          "nextNode": "q4a2b_aggressive_rally"
+        }
+      ]
+    },
+    "q3b1_alliance_demands": {
+      "text": "Ignoring Prashant Kishor has kept the focus on the NDA, but with the alliance looking viable, a key partner, Mukesh Sahani's VIP, publicly demands a commitment for the Deputy Chief Minister post if the Mahagathbandhan wins. This puts you in a bind.",
+      "options": [
+        {
+          "text": "Publicly refuse the demand, stating that all posts will be decided after the election. Appeal for unity and risk Sahani's party quietly working against you in key seats.",
+          "nextNode": "q4b1a_solo_rally"
+        },
+        {
+          "text": "Make a secret, back-channel promise to Mukesh Sahani to secure his loyalty, while publicly maintaining that no decisions have been made. It's a risky gamble that could leak.",
+          "nextNode": "q4b1b_joint_presser"
+        }
+      ]
+    },
+    "q3b2_media_backlash": {
+      "text": "Your personal attacks on Prashant Kishor have backfired. A respected national news outlet runs a primetime segment portraying you as 'insecure' and 'resorting to old politics.' The narrative is shifting from social justice to your political style.",
+      "options": [
+        {
+          "text": "Double down on the attack. Use your social media channels to label the media outlet as 'Bikau Media' (sold-out media) and an agent of your opponents, turning the issue into a battle against a biased elite.",
+          "nextNode": "q4b2a_polarizing_interview"
+        },
+        {
+          "text": "Course correct. Issue a statement clarifying that your criticism was of Kishor's 'political model,' not personal. Immediately announce a major rally focused on the failures of the NDA government to change the subject.",
+          "nextNode": "q4b2b_debate_moderation"
+        }
+      ]
+    },
+    "q3b3_left_wing_pressure": {
+      "text": "Your adapted message is neutralizing PK, but it has alarmed your Left party allies. They feel you are diluting the core 'Social Justice' message and demand you commit to implementing several radical welfare promises from their manifesto, like a ₹3,000 monthly unemployment allowance.",
+      "options": [
+        {
+          "text": "Reject the demand as fiscally irresponsible. Argue that making populist promises you can't keep is what has held Bihar back, and stick to your more moderate governance-plus-justice pitch.",
+          "nextNode": "q4b3a_townhall_pragmatic"
+        },
+        {
+          "text": "Embrace the promises. Announce that the Mahagathbandhan will implement the unemployment allowance and other Leftist schemes, firing up the combined core base but risking alienating the business community and moderate voters.",
+          "nextNode": "q4b3b_rally_populist"
+        }
+      ]
+    },
+    "q4a1a_debate_challenge": {
+      "text": "It's the climax of the campaign. A leading news channel invites you for a live, one-on-one 'Bihar Ka Boss' debate with CM Nitish Kumar. Your allies, starved of funds, are resentful and might not fully back you. What is your move?",
+      "options": [
+        {
+          "text": "Accept the debate. This is your chance to shine and expose the incumbent CM on your own merits, proving you don't need the crutch of your allies.",
+          "nextNode": "q5a1a1_debate_solo_effort"
+        },
+        {
+          "text": "Decline, citing a biased moderator. Instead, hold a massive 'Jan Samvad' (public dialogue) rally, claiming you'd rather answer to the people of Bihar than a TV anchor.",
+          "nextNode": "q5a1a2_rally_instead"
+        }
+      ]
+    },
+    "q4a1b_rally_focus": {
+      "text": "Your decision to fund the allies has paid off with a show of unity. They propose a massive joint rally in Patna, a final show of strength for the Mahagathbandhan. How do you stage this event?",
+      "options": [
+        {
+          "text": "Make it a true show of unity. Give prominent speaking slots to all key allies, even if it means less airtime for you. Project a cohesive, stable alternative to the NDA.",
+          "nextNode": "q5a1b1_joint_rally_push"
+        },
+        {
+          "text": "Position yourself as the undisputed leader. Let allies speak first, but reserve the final, longest, and primetime speech for yourself to cement your image as the CM-in-waiting.",
+          "nextNode": "q5a1b2_leader_rally_push"
+        }
+      ]
+    },
+    "q4a2a_interview_soften": {
+      "text": "You've agreed to an exclusive interview with a respected, neutral journalist to soften your image after mollifying party seniors. They ask a pointed question: 'Do you concede that the fear of 'Jungle Raj' is a real concern for many voters, and what is your concrete assurance against it?'",
+      "options": [
+        {
+          "text": "Offer a nuanced self-critique. Acknowledge 'past mistakes' by previous administrations and emphasize that your government will be defined by 'law and order with a human touch.'",
+          "nextNode": "q5a2a1_apology_push"
+        },
+        {
+          "text": "Defend your family's legacy. Argue that 'Jungle Raj' is a biased narrative created by elites and that your father's rule was about social empowerment for the poor, a legacy you will continue.",
+          "nextNode": "q5a2a2_defense_push"
+        }
+      ]
+    },
+    "q4a2b_aggressive_rally": {
+      "text": "Your decision to sideline the old guard has consolidated your power. You are addressing a massive, energetic youth rally in Muzaffarpur. The crowd is chanting your name. This is your moment to define the campaign's climax.",
+      "options": [
+        {
+          "text": "Deliver a fiery, populist speech. Promise to 'cleanse' the system of corrupt old leaders from all parties and build a 'Naya Bihar' with the youth, for the youth.",
+          "nextNode": "q5a2b1_populist_push"
+        },
+        {
+          "text": "Deliver a disciplined, visionary speech. Focus entirely on your roadmap for jobs, education, and healthcare, presenting yourself as a mature statesman ready to govern, moving beyond internal squabbles.",
+          "nextNode": "q5a2b2_statesman_push"
+        }
+      ]
+    },
+    "q4b1a_solo_rally": {
+      "text": "Your refusal to publicly commit a Deputy CM post has caused Mukesh Sahani to hold smaller, separate rallies, creating a perception of disunity. You are now holding a major, solo RJD rally in the Seemanchal region. How do you address the alliance issue?",
+      "options": [
+        {
+          "text": "Ignore the issue completely. Focus your speech entirely on attacking the NDA's failures on social justice and the SIR controversy, projecting confidence that your base is enough.",
+          "nextNode": "q5b1a1_ignore_ally"
+        },
+        {
+          "text": "Address it indirectly. Make a passionate appeal for all 'pro-justice' forces to unite, stating that personal ambitions must be set aside for the greater good of defeating the NDA.",
+          "nextNode": "q5b1a2_appeal_to_ally"
+        }
+      ]
+    },
+    "q4b1b_joint_presser": {
+      "text": "Your secret deal has kept the alliance together. At a joint press conference to project unity, a journalist asks you directly: 'Have you promised the Deputy CM post to Mukesh Sahani?' This is a critical moment.",
+      "options": [
+        {
+          "text": "Issue a categorical denial. State firmly, 'This is a baseless rumor spread by the NDA to divide us. All posts will be decided after the results.' A high-risk lie.",
+          "nextNode": "q5b1b1_denial_push"
+        },
+        {
+          "text": "Evade and deflect. Smile and say, 'First, let's win the election together. Our only promise right now is to the people of Bihar.' This avoids a direct lie but may not be convincing.",
+          "nextNode": "q5b1b2_evasion_push"
+        }
+      ]
+    },
+    "q4b2a_polarizing_interview": {
+      "text": "Your war with the media has galvanized your base but alarmed moderates. You agree to an interview with a notoriously confrontational, pro-NDA anchor, intending to use the platform to your advantage.",
+      "options": [
+        {
+          "text": "Go on an all-out offensive. Accuse the anchor and their channel of being 'paid agents of Delhi,' creating a viral, polarizing spectacle that delights your supporters.",
+          "nextNode": "q5b2a1_viral_push"
+        },
+        {
+          "text": "Attempt to systematically dismantle the anchor's biased questions with facts and figures about unemployment and caste atrocities, aiming to win the argument on substance.",
+          "nextNode": "q5b2a2_substance_push"
+        }
+      ]
+    },
+    "q4b2b_debate_moderation": {
+      "text": "Your course correction has calmed the media storm. You are now in a televised debate. The moderator asks: 'Your campaign is focused on caste. Doesn't this divide society and distract from development?'",
+      "options": [
+        {
+          "text": "Reframe the issue. 'It's not about dividing society, it's about giving everyone their fair share. Social justice IS development for the 90% of Bihar that has been left behind.'",
+          "nextNode": "q5b2b1_reframe_push"
+        },
+        {
+          "text": "Bridge the two themes. 'Social justice and economic development are two wheels of the same chariot. We will conduct a caste census to ensure fair distribution of resources for our new development schemes.'",
+          "nextNode": "q5b2b2_bridge_push"
+        }
+      ]
+    },
+    "q4b3a_townhall_pragmatic": {
+      "text": "Your rejection of populist promises has earned praise from economic experts but your Left allies are now barely campaigning for you. You are at a town hall with small business owners and traders. How do you win their trust?",
+      "options": [
+        {
+          "text": "Promise a 'stable and predictable' tax regime and a reduction in bureaucratic red tape. Position yourself as a pro-business, reformist leader.",
+          "nextNode": "q5b3a1_business_push"
+        },
+        {
+          "text": "Reassure them that your social justice policies will expand the consumer base, arguing that empowering the poor is the best way to boost the entire economy.",
+          "nextNode": "q5b3a2_inclusive_push"
+        }
+      ]
+    },
+    "q4b3b_rally_populist": {
+      "text": "Embracing the unemployment allowance promise has created a huge buzz among the youth and poor. You are at a massive rally in Gaya. How do you capitalize on this populist wave?",
+      "options": [
+        {
+          "text": "Announce another major populist promise: a complete waiver of all agricultural loans for small and marginal farmers.",
+          "nextNode": "q5b3b1_populist_max_push"
+        },
+        {
+          "text": "Focus on the mechanism. Detail exactly how you will fund and implement the unemployment allowance, contrasting your 'concrete plan' with the NDA's 'empty slogans.'",
+          "nextNode": "q5b3b2_implementation_push"
+        }
+      ]
+    },
+    "q5a1a1_debate_solo_effort": {
+      "text": "Your performance in the debate was stellar; you came across as confident and visionary. For the final 48 hours, how do you convert this personal victory into votes?",
+      "options": [
+        {
+          "text": "Launch a massive social media blitz with the tagline '#BiharWithTejashwi,' featuring your best debate clips to create a wave of support centered on you as the leader.",
+          "nextNode": "end_debate_win_personal"
+        },
+        {
+          "text": "Send a personal, recorded message to party workers, thanking them and urging them to go door-to-door to spread the key messages from your debate victory.",
+          "nextNode": "end_debate_win_grassroots"
+        }
+      ]
+    },
+    "q5a1a2_rally_instead": {
+      "text": "Skipping the debate for a public rally was a gamble that paid off, resonating with your rural base. For the final push, what is your last-minute tactical move?",
+      "options": [
+        {
+          "text": "Focus all remaining resources and manpower on intensive get-out-the-vote (GOTV) efforts in your rural strongholds, ensuring maximum turnout from your core supporters.",
+          "nextNode": "end_rally_win_mobilization"
+        },
+        {
+          "text": "Make a surprise final-day visit to a revered local temple and issue a statement appealing to Bihar's cultural and religious sentiments, subtly blunting the BJP's Hindutva appeal.",
+          "nextNode": "end_rally_win_cultural"
+        }
+      ]
+    },
+    "q5a1b1_joint_rally_push": {
+      "text": "The joint rally projected a united front. With 48 hours to go, how do you reinforce this message of a stable and cohesive coalition?",
+      "options": [
+        {
+          "text": "Release a joint open letter in all major newspapers, signed by you and all allied leaders, outlining a common minimum program for the first 100 days of your government.",
+          "nextNode": "end_joint_rally_stable_win"
+        },
+        {
+          "text": "Conduct a final, coordinated social media campaign where all allied party accounts simultaneously post the same message of unity and change.",
+          "nextNode": "end_joint_rally_digital_unity"
+        }
+      ]
+    },
+    "q5a1b2_leader_rally_push": {
+      "text": "You successfully positioned yourself as the paramount leader at the joint rally. In the final 48 hours, do you soften or sharpen this 'leader-centric' image?",
+      "options": [
+        {
+          "text": "Sharpen it. Run a final ad campaign focused solely on your image and leadership, with the slogan 'Ek Hi Vikalp, Tejashwi' (Only one choice, Tejashwi).",
+          "nextNode": "end_leader_rally_strong_win"
+        },
+        {
+          "text": "Soften it. Make a final appeal video where you explicitly thank your coalition partners and emphasize that the victory will belong to the entire Mahagathbandhan.",
+          "nextNode": "end_leader_rally_inclusive_win"
+        }
+      ]
+    },
+    "q5a2a1_apology_push": {
+      "text": "Your nuanced apology has been well-received by the media and has calmed internal dissent. How do you leverage this new, statesmanlike image in the final 48 hours?",
+      "options": [
+        {
+          "text": "Conduct a calm, reassuring Facebook Live session, answering voters' questions directly and projecting an image of accessibility and maturity.",
+          "nextNode": "end_apology_statesman_win"
+        },
+        {
+          "text": "Deploy party workers door-to-door in urban areas with pamphlets highlighting your key development promises, using your newfound credibility to win over undecided voters.",
+          "nextNode": "end_apology_urban_swing"
+        }
+      ]
+    },
+    "q5a2a2_defense_push": {
+      "text": "Defending your father's legacy has fired up your core base but confirmed the fears of swing voters. With 48 hours left, which group do you focus on?",
+      "options": [
+        {
+          "text": "Focus exclusively on booth management in your party's strongholds. Ensure every single core voter turns out, betting that high consolidation can overcome the loss of swing voters.",
+          "nextNode": "end_defense_base_win"
+        },
+        {
+          "text": "Make one last, polarizing appeal to your community, warning that the opposition plans to roll back social justice gains and that this is a battle for survival.",
+          "nextNode": "end_defense_base_loss"
+        }
+      ]
+    },
+    "q5a2b1_populist_push": {
+      "text": "Your fiery speech has made you a youth icon, but the party's old guard is now completely alienated. For the final push, do you consolidate your new base or try to mend fences?",
+      "options": [
+        {
+          "text": "Unleash your youth wing. Organize 'Naya Bihar' bike rallies across major towns, creating a visual spectacle of youth power in the final 24 hours.",
+          "nextNode": "end_populist_youth_wave"
+        },
+        {
+          "text": "Release a highly controversial AI-generated video that virally mocks the aging NDA leadership, betting on digital shock value to mobilize young, non-traditional voters.",
+          "nextNode": "end_populist_viral_risk"
+        }
+      ]
+    },
+    "q5a2b2_statesman_push": {
+      "text": "Your visionary speech has impressed moderate voters and salvaged your relationship with the party's senior leaders. How do you capitalize on this broad-based appeal in the final hours?",
+      "options": [
+        {
+          "text": "Take out full-page ads in all major newspapers showcasing your '10-point plan for Bihar's development,' appealing to the educated, urban electorate.",
+          "nextNode": "end_statesman_broad_victory"
+        },
+        {
+          "text": "Hold a final, dignified press conference flanked by senior party leaders, projecting an image of a united, experienced, and ready-to-govern team.",
+          "nextNode": "end_statesman_united_victory"
+        }
+      ]
+    },
+    "q5b1a1_ignore_ally": {
+      "text": "You've ignored the disgruntled ally and focused on your core social justice message. The last 48 hours are crucial. How do you ensure victory?",
+      "options": [
+        {
+          "text": "Concentrate all party machinery on booth management in RJD strongholds to maximize turnout, writing off any losses from the disgruntled ally.",
+          "nextNode": "end_ignore_ally_narrow_win"
+        },
+        {
+          "text": "Launch a last-minute, aggressive campaign specifically targeting the ally's community, accusing him of betraying them for personal gain by secretly helping the NDA.",
+          "nextNode": "end_ignore_ally_polarized_loss"
+        }
+      ]
+    },
+    "q5b1a2_appeal_to_ally": {
+      "text": "Your public appeal for unity has put pressure on the wavering ally, but they remain non-committal. What is your final move before the campaign silence period begins?",
+      "options": [
+        {
+          "text": "Send a senior, respected leader from a neutral party (like the Left) as an emissary to make one last offer and bring them back into the fold.",
+          "nextNode": "end_appeal_ally_returns"
+        },
+        {
+          "text": "Prepare for the worst. Shift resources to seats where the ally's sabotage could hurt you the most, and run a localized campaign asking people to vote for the RJD symbol directly.",
+          "nextNode": "end_appeal_ally_sabotage"
+        }
+      ]
+    },
+    "q5b1b1_denial_push": {
+      "text": "Your denial at the press conference has held, but it's a ticking time bomb. The disgruntled ally could expose the lie at any moment. What do you do in the final 48 hours?",
+      "options": [
+        {
+          "text": "Go into overdrive with voter mobilization. Create such strong on-the-ground momentum that even a last-minute revelation won't be able to stop it.",
+          "nextNode": "end_denial_wins"
+        },
+        {
+          "text": "Send a trusted aide to the ally with a post-dated, signed letter confirming the Deputy CM promise, asking them to remain silent until after the results.",
+          "nextNode": "end_denial_blackmail"
+        }
+      ]
+    },
+    "q5b1b2_evasion_push": {
+      "text": "Your evasive answer at the press conference has created suspicion, and the media is running stories about a 'crack in the Mahagathbandhan.' How do you spend the final 48 hours?",
+      "options": [
+        {
+          "text": "Change the narrative. Launch a massive, last-minute social media campaign focused on the controversial SIR voter roll issue, reigniting your base's anger against the government.",
+          "nextNode": "end_evasion_distraction_win"
+        },
+        {
+          "text": "Do a series of rapid, small-scale joint rallies with the disgruntled ally in their key constituencies, forcing them to appear united with you and calming the media narrative.",
+          "nextNode": "end_evasion_forced_unity"
+        }
+      ]
+    },
+    "q5b2a1_viral_push": {
+      "text": "The viral confrontation with the anchor has made you a hero to your base but a villain to many others. How do you use this intense polarization in the final hours?",
+      "options": [
+        {
+          "text": "Unleash your social media 'warriors' to relentlessly troll the anchor and the channel, keeping the 'us vs. them' narrative at a fever pitch until voting ends.",
+          "nextNode": "end_viral_troll_loss"
+        },
+        {
+          "text": "Issue a final, defiant statement, promising that your first act as CM will be to create a committee to investigate 'media monopolies' in Bihar.",
+          "nextNode": "end_viral_defiance_win"
+        }
+      ]
+    },
+    "q5b2a2_substance_push": {
+      "text": "Your fact-based takedown of the biased anchor has won you grudging respect from some moderates. How do you translate this into votes in the final 48 hours?",
+      "options": [
+        {
+          "text": "Release a final 'Appeal to the Conscience of Bihar' video, asking voters to reject hate and choose a leader who debates on facts, not fiction.",
+          "nextNode": "end_substance_appeal_win"
+        },
+        {
+          "text": "Run targeted ads in urban and semi-urban areas showcasing clips of your calm, fact-based responses, positioning you as a mature and intelligent leader.",
+          "nextNode": "end_substance_targeted_win"
+        }
+      ]
+    },
+    "q5b2b1_reframe_push": {
+      "text": "Your reframing of 'caste politics' as 'social justice for all' was powerful. In the final hours, how do you drive this message home to your core constituency?",
+      "options": [
+        {
+          "text": "Focus all manpower on booth-level management in your strongholds. The message has landed; now it's all about ensuring maximum, disciplined turnout.",
+          "nextNode": "end_reframe_base_win"
+        },
+        {
+          "text": "Send a mass audio message via WhatsApp from your father, Lalu Prasad Yadav, urging voters to unite and vote for his son to protect their rights and dignity.",
+          "nextNode": "end_reframe_legacy_win"
+        }
+      ]
+    },
+    "q5b2b2_bridge_push": {
+      "text": "Your message connecting social and economic progress has broadened your appeal. For the final push, which voter segment do you target?",
+      "options": [
+        {
+          "text": "Hold a final press conference flanked by respected economists and academics, who endorse your integrated vision for Bihar's growth.",
+          "nextNode": "end_bridge_intellectual_win"
+        },
+        {
+          "text": "Run a targeted digital ad campaign showing how the caste census will lead to better-targeted development schemes, directly appealing to both aspirations and identity.",
+          "nextNode": "end_bridge_digital_win"
+        }
+      ]
+    },
+    "q5b3a1_business_push": {
+      "text": "Your pro-business pitch has intrigued urban voters, but your Left allies are furious and have started appealing to their cadre to vote 'NOTA'. What's your final move?",
+      "options": [
+        {
+          "text": "Ignore the Left's threats. Double down and publish an op-ed in a business daily detailing your 'Bihar First' economic policy to lock in the support of the business community.",
+          "nextNode": "end_business_win_no_left"
+        },
+        {
+          "text": "Attempt a last-minute reconciliation. Issue a statement clarifying that your pro-business stance is about 'wealth creation for all' and doesn't contradict your commitment to social welfare.",
+          "nextNode": "end_business_reconcile_loss"
+        }
+      ]
+    },
+    "q5b3a2_inclusive_push": {
+      "text": "Your message of 'empowering the poor to boost the economy' has resonated with a broad audience. How do you seal this diverse coalition of voters in the last 48 hours?",
+      "options": [
+        {
+          "text": "Release a series of short video testimonials from small shopkeepers, farmers, and students, all explaining how your policies will benefit them personally.",
+          "nextNode": "end_inclusive_testimonial_win"
+        },
+        {
+          "text": "Focus on a massive, non-polarizing get-out-the-vote drive, with volunteers from all communities working together to bring voters to the booths, symbolizing your message of unity.",
+          "nextNode": "end_inclusive_unity_win"
+        }
+      ]
+    },
+    "q5b3b1_populist_max_push": {
+      "text": "The loan waiver promise has created a massive wave in rural Bihar, but economic commentators are calling your plan a 'recipe for bankruptcy.' What is your final message?",
+      "options": [
+        {
+          "text": "Ignore the critics. Flood rural Bihar with pamphlets and audio messages publicizing the loan waiver, betting that the electoral wave is too big to fail.",
+          "nextNode": "end_populist_wave_win"
+        },
+        {
+          "text": "Hold a press conference to defend your plan, arguing that 'human lives are more important than fiscal deficits' and accusing the critics of being anti-poor.",
+          "nextNode": "end_populist_defense_win"
+        }
+      ]
+    },
+    "q5b3b2_implementation_push": {
+      "text": "Your focus on the 'how' has impressed many who were skeptical of the populist promises. With 48 hours to go, how do you reinforce this image of a credible planner?",
+      "options": [
+        {
+          "text": "Release a detailed 'First 100 Days Roadmap' document to the media, outlining the specific administrative steps you will take to fund and roll out your schemes.",
+          "nextNode": "end_implementation_roadmap_win"
+        },
+        {
+          "text": "Run a simple, direct-to-camera video appeal, where you speak calmly and explain, 'I don't just make promises, I have a plan. Give me a chance to implement it.'",
+          "nextNode": "end_implementation_appeal_win"
+        }
+      ]
+    },
+    "end_debate_win_personal": {
+      "text": "Victory! Your leadership in the final debate created a massive personal wave that swept you to power.",
+      "isEnding": true,
+      "summary": "By choosing a jobs-focused agenda, deflecting corruption charges, and then seizing the spotlight in the final debate, you crafted a narrative of yourself as a modern, capable leader. The decision to prioritize RJD's own seats over resentful allies was risky, but your stellar debate performance made their support irrelevant. The final '#BiharWithTejashwi' blitz sealed the deal, converting undecideds who were impressed by your vision. You have a powerful personal mandate, but your first challenge will be managing the Mahagathbandhan, whose other members feel sidelined by your victory.",
+      "stats": {
+        "publicApproval": "61%",
+        "economicOutlook": "Strong Mandate for Growth",
+        "partyCohesion": "Fraying Alliance",
+        "socialFabric": "Broadly Harmonious"
+      }
+    },
+    "end_debate_win_grassroots": {
+      "text": "You've won! The debate performance, amplified by a powerful grassroots effort, was the perfect one-two punch.",
+      "isEnding": true,
+      "summary": "Your campaign was a masterclass in combining high-level messaging with on-the-ground execution. After a strong debate performance that established your credentials, your decision to empower party workers to spread the message door-to-door proved decisive. This prevented the message from being lost in the media noise and mobilized voters effectively. While your initial decision to under-fund allies has created some tension, the clear victory gives you the upper hand in post-poll negotiations. Your development-focused campaign has prevented deep social polarization.",
+      "stats": {
+        "publicApproval": "58%",
+        "economicOutlook": "Positive Growth Signals",
+        "partyCohesion": "Alliance Tensions",
+        "socialFabric": "Broadly Harmonious"
+      }
+    },
+    "end_rally_win_mobilization": {
+      "text": "A narrow victory! Your gamble to skip the debate paid off, as your energized rural base turned out in massive numbers.",
+      "isEnding": true,
+      "summary": "By avoiding the media spotlight and focusing on a direct connection with your rural base, you played to your strengths. The final get-out-the-vote drive in your strongholds was just enough to compensate for losses in urban centers where your debate absence was felt. This was a victory of ground-game over air-waves. However, it is a slim majority, and your government will be heavily reliant on its rural, caste-based support. The economic path forward is unclear, as your mandate is for social stability, not necessarily for the modern reforms you initially campaigned on.",
+      "stats": {
+        "publicApproval": "52%",
+        "economicOutlook": "Populist Strain",
+        "partyCohesion": "Iron Grip",
+        "socialFabric": "Mildly Polarized"
+      }
+    },
+    "end_rally_win_cultural": {
+      "text": "You've lost by a whisker. The last-minute temple visit was seen as a desperate, inauthentic gimmick by voters.",
+      "isEnding": true,
+      "summary": "The strategy of focusing on rural mobilization and skipping the debate was sound, but the final tactical move backfired. Your attempt to play on the BJP's turf with a temple visit was perceived as opportunistic and failed to sway religious voters, while slightly depressing turnout among your core secular supporters. The NDA successfully painted you as inconsistent. Though you ran a strong campaign, this final misstep cost you the handful of seats that would have made the difference. You remain a powerful opposition leader, but the party is disappointed by this close loss.",
+      "stats": {
+        "publicApproval": "49%",
+        "economicOutlook": "Status Quo",
+        "partyCohesion": "Internal Grumbling",
+        "socialFabric": "Mildly Polarized"
+      }
+    },
+    "end_joint_rally_stable_win": {
+      "text": "A solid victory for the Mahagathbandhan! The final message of a united, stable coalition convinced undecided voters.",
+      "isEnding": true,
+      "summary": "Your campaign's masterstroke was your decision to prioritize alliance unity. By funding your allies and presenting a cohesive front at the final rally and in your open letter, you successfully countered the NDA's narrative of a chaotic opposition. Voters chose your promise of a stable, multi-party government over the NDA's infighting. You enter the CM's office with strong goodwill from your partners, providing a solid foundation for your government. The campaign, focused on a broad coalition, has helped maintain social harmony.",
+      "stats": {
+        "publicApproval": "57%",
+        "economicOutlook": "Coalition-led Growth",
+        "partyCohesion": "Strong Alliance",
+        "socialFabric": "Broadly Harmonious"
+      }
+    },
+    "end_joint_rally_digital_unity": {
+      "text": "A narrow win! The alliance held together just enough to cross the finish line, but the campaign lacked a strong, central punch.",
+      "isEnding": true,
+      "summary": "By consistently prioritizing your allies, you ensured the Mahagathbandhan remained intact, which was crucial for consolidating the anti-NDA vote. The final joint social media push was a modern touch but lacked the emotional impact to create a decisive wave. You have won the election, but the victory feels more like a collective effort than a personal mandate. Your reliance on allies means you will have to navigate complex coalition demands, potentially straining your economic agenda. Party cohesion is high, but your personal authority is somewhat diminished.",
+      "stats": {
+        "publicApproval": "53%",
+        "economicOutlook": "Populist Strain",
+        "partyCohesion": "High, but Dependent",
+        "socialFabric": "Broadly Harmonious"
+      }
+    },
+    "end_leader_rally_strong_win": {
+      "text": "A resounding victory! Your powerful, leader-centric campaign has given you a strong personal mandate to govern.",
+      "isEnding": true,
+      "summary": "You skillfully used the Mahagathbandhan platform to project your own leadership. While you kept the allies happy with funds, your final rally speech and ad campaign left no doubt about who was in charge. Voters responded to this show of strength and clarity, giving you a decisive majority. You have a strong mandate to pursue your development agenda. However, while your allies are part of the victory, they are also aware of their secondary status. This could lead to future tensions, even though your party is currently united behind your powerful leadership.",
+      "stats": {
+        "publicApproval": "63%",
+        "economicOutlook": "Strong Mandate for Growth",
+        "partyCohesion": "Iron Grip",
+        "socialFabric": "Broadly Harmonious"
+      }
+    },
+    "end_leader_rally_inclusive_win": {
+      "text": "A comfortable victory. You successfully balanced your own leadership with the need for alliance unity.",
+      "isEnding": true,
+      "summary": "Your campaign was a fine balancing act. You established yourself as the primary leader at the Patna rally but wisely used your final message to praise your allies. This ensured that voters saw both a strong leader and a united team. The strategy worked perfectly, leading to a comfortable majority for the Mahagathbandhan. You have a clear mandate and the goodwill of your coalition partners, creating a stable platform for governance and economic development. Your inclusive messaging has helped keep social divisions in check.",
+      "stats": {
+        "publicApproval": "59%",
+        "economicOutlook": "Positive Growth Signals",
+        "partyCohesion": "Strong Alliance",
+        "socialFabric": "Broadly Harmonious"
+      }
+    },
+    "end_apology_statesman_win": {
+      "text": "You've won! Your mature handling of the 'Jungle Raj' accusations and your final, reassuring outreach convinced the crucial swing voters.",
+      "isEnding": true,
+      "summary": "Turning a crisis into a strength was the hallmark of your campaign. By engaging with dissenters and offering a nuanced apology, you transformed your image from an aggressive attacker to a thoughtful statesman. The final Facebook Live sealed this perception. This maturity won over a significant chunk of urban and middle-class voters who were wary of the NDA but feared a return to the past. You have a mandate for clean governance and development, and your party is more united than ever, having weathered the internal storm.",
+      "stats": {
+        "publicApproval": "58%",
+        "economicOutlook": "Strong Mandate for Growth",
+        "partyCohesion": "United and Loyal",
+        "socialFabric": "Broadly Harmonious"
+      }
+    },
+    "end_apology_urban_swing": {
+      "text": "A wafer-thin victory! Your appeal to urban voters made the difference in a handful of key seats.",
+      "isEnding": true,
+      "summary": "Your campaign successfully navigated a difficult path. The counter-attacks on the NDA energized your base, while your subsequent apology and mature messaging prevented the complete alienation of undecided voters. The final push in urban areas with a development-focused message was just enough to win a few critical seats by narrow margins. You have scraped through to a majority. Governing will be challenging, as you have a mixed mandate and must balance the aggressive expectations of your base with the need for stable, inclusive governance.",
+      "stats": {
+        "publicApproval": "51%",
+        "economicOutlook": "Cautious Optimism",
+        "partyCohesion": "Mostly United",
+        "socialFabric": "Mildly Polarized"
+      }
+    },
+    "end_defense_base_win": {
+      "text": "Victory by consolidation! Your unapologetic defense of your family's legacy led to a massive turnout from your core base, just enough to secure a majority.",
+      "isEnding": true,
+      "summary": "You chose to fight the election on your own terms. By refusing to apologize for the past and instead framing it as a legacy of social empowerment, you galvanized your core supporters. The final strategy to focus exclusively on booth management in RJD strongholds was a clinical execution of base politics. While you lost support among moderates and in urban areas, the sheer force of your consolidated vote bank carried you over the line. You have a clear, but narrow and highly polarized, mandate. Your government will face fierce opposition, and the state's social fabric is strained.",
+      "stats": {
+        "publicApproval": "52%",
+        "economicOutlook": "Populist Strain",
+        "partyCohesion": "Iron Grip",
+        "socialFabric": "Deeply Polarized"
+      }
+    },
+    "end_defense_base_loss": {
+      "text": "A crushing defeat. Your defense of the past and polarizing final appeal backfired, consolidating all non-RJD votes against you.",
+      "isEnding": true,
+      "summary": "Your campaign strategy ultimately failed to expand beyond your core base. Defending the 'Jungle Raj' era and making a final, polarizing appeal reminded swing voters of their worst fears and led to a strong consolidation behind the NDA. Even many of your own party's senior leaders were unenthusiastic. The result is a significant loss, with the NDA securing a comfortable majority. Your authority within the party is now under question, with many blaming your aggressive, backward-looking strategy for the defeat. A period of introspection and rebuilding awaits.",
+      "stats": {
+        "publicApproval": "42%",
+        "economicOutlook": "Status Quo",
+        "partyCohesion": "Internal Dissent",
+        "socialFabric": "Deeply Polarized"
+      }
+    },
+    "end_populist_youth_wave": {
+      "text": "A youth-quake! Your fiery populism and final bike rallies created an unstoppable wave that has swept you into the Chief Minister's office.",
+      "isEnding": true,
+      "summary": "You gambled on youth over experience, and it paid off spectacularly. By sidelining the old guard and running an aggressive, anti-establishment campaign, you captured the imagination of Bihar's young and unemployed. The final bike rallies were a masterstroke, creating a visual wave of support that overwhelmed the NDA's traditional campaign. You have a huge, energetic mandate for change. However, you are now in power with a deeply fractured party, having alienated the senior leadership. Your economic promises are vast, and the outlook is strained by populist expectations.",
+      "stats": {
+        "publicApproval": "64%",
+        "economicOutlook": "Populist Strain",
+        "partyCohesion": "Deeply Fractured",
+        "socialFabric": "Mildly Polarized"
+      }
+    },
+    "end_populist_viral_risk": {
+      "text": "A narrow loss. The viral video was a step too far, alienating women and older voters and overshadowing your message on jobs.",
+      "isEnding": true,
+      "summary": "Your campaign rode a wave of youth anger but stumbled at the final hurdle. While the aggressive strategy and sidelining of senior leaders created energy, the final AI-generated video mocking the NDA leadership was perceived as disrespectful and crass, particularly by women and older voters. It allowed the NDA to paint your campaign as immature and reckless. This last-minute shift in sentiment in a few key constituencies was enough to cost you the election. Your grip on the party is strong, but your tactics are now being questioned.",
+      "stats": {
+        "publicApproval": "48%",
+        "economicOutlook": "Status Quo",
+        "partyCohesion": "Iron Grip",
+        "socialFabric": "Deeply Polarized"
+      }
+    },
+    "end_statesman_broad_victory": {
+      "text": "A convincing win! Your statesmanlike campaign and focus on a clear development plan won over a broad coalition of voters.",
+      "isEnding": true,
+      "summary": "You successfully transformed your image mid-campaign. After asserting your authority over the party, you pivoted to a disciplined, visionary message that appealed beyond your base. The final push with newspaper ads detailing your 10-point plan convinced undecided urban and educated voters that you were the right choice for Bihar's future. This strategy resulted in a broad and stable majority. You have a strong mandate for growth, and because you managed internal dissent, your party is united behind you.",
+      "stats": {
+        "publicApproval": "60%",
+        "economicOutlook": "Strong Mandate for Growth",
+        "partyCohesion": "United and Loyal",
+        "socialFabric": "Broadly Harmonious"
+      }
+    },
+    "end_statesman_united_victory": {
+      "text": "A solid victory. Projecting a united and experienced team in the final days proved to be the winning formula.",
+      "isEnding": true,
+      "summary": "Your campaign showed remarkable maturity and strategic depth. You asserted your leadership when necessary but wisely chose to project an image of a united, experienced team in the final days. The final press conference with senior leaders reassured voters who were wary of a one-man show and countered the NDA's claims of opposition disunity. This calm, confident approach led to a solid and respectable majority. You have a mandate for stable governance, and your party is cohesive and ready to deliver.",
+      "stats": {
+        "publicApproval": "57%",
+        "economicOutlook": "Positive Growth Signals",
+        "partyCohesion": "United and Loyal",
+        "socialFabric": "Broadly Harmonious"
+      }
+    },
+    "end_ignore_ally_narrow_win": {
+      "text": "You've scraped through! The RJD's ground game was just strong enough to overcome the ally's sabotage and win a razor-thin majority.",
+      "isEnding": true,
+      "summary": "This was a victory of pure party strength. By focusing on social justice, ignoring Prashant Kishor, and ultimately deciding to rely on your own party's machinery, you took a massive gamble. The public refusal to bow to an ally's demands and the final push for booth management in your strongholds demonstrated ruthless efficiency. It was just enough to win, despite the ally playing spoiler in several seats. You have a fragile majority and a government with no goodwill from former partners, making governance a tightrope walk. The caste-focused campaign has left society polarized.",
+      "stats": {
+        "publicApproval": "51%",
+        "economicOutlook": "Uncertain",
+        "partyCohesion": "Iron Grip",
+        "socialFabric": "Deeply Polarized"
+      }
+    },
+    "end_ignore_ally_polarized_loss": {
+      "text": "A devastating loss. The disgruntled ally successfully played spoiler, and your last-minute attacks on him backfired, costing you the election.",
+      "isEnding": true,
+      "summary": "Your strategy of ignoring internal alliance problems while focusing on a polarizing social justice message proved fatal. The disgruntled ally, feeling ignored, actively worked against you in dozens of seats. Your last-ditch effort to attack him personally was seen as desperate and further alienated his community. This, combined with Prashant Kishor chipping away at your votes, led to a split in the anti-NDA vote and a comfortable victory for the ruling coalition. Your leadership and alliance management skills are now under severe scrutiny.",
+      "stats": {
+        "publicApproval": "44%",
+        "economicOutlook": "Status Quo",
+        "partyCohesion": "Internal Dissent",
+        "socialFabric": "Deeply Polarized"
+      }
+    },
+    "end_appeal_ally_returns": {
+      "text": "Victory! The last-minute diplomacy worked. The return of your disgruntled ally consolidated the opposition vote and pushed you over the finish line.",
+      "isEnding": true,
+      "summary": "Your campaign was saved by pragmatic, last-minute diplomacy. While your initial refusal to bow to the ally's demands was principled, the subsequent appeal for unity and the use of an emissary showed flexibility. The ally's return just before the silence period prevented a fatal split in the anti-NDA vote. You have won a workable majority and learned a valuable lesson in coalition management. However, the reconciliation was tactical, and keeping the diverse interests of your government together will be your primary challenge.",
+      "stats": {
+        "publicApproval": "54%",
+        "economicOutlook": "Coalition-led Growth",
+        "partyCohesion": "Fragile Alliance",
+        "socialFabric": "Mildly Polarized"
+      }
+    },
+    "end_appeal_ally_sabotage": {
+      "text": "A narrow defeat. Despite your best efforts to mitigate the damage, the disgruntled ally played spoiler in just enough seats to deny you a majority.",
+      "isEnding": true,
+      "summary": "You fought a valiant campaign, but you couldn't overcome the internal sabotage. Your principled stand against public blackmail by an ally was admirable, and your attempt to shift resources to compensate was a sound tactical move. However, in a close election, the handful of seats where the ally's campaign split the vote proved to be the difference between victory and defeat. The NDA returns to power with a slim majority. You emerge with your reputation for integrity intact, but the loss is a bitter pill for the party to swallow.",
+      "stats": {
+        "publicApproval": "49%",
+        "economicOutlook": "Status Quo",
+        "partyCohesion": "United in Opposition",
+        "socialFabric": "Mildly Polarized"
+      }
+    },
+    "end_denial_wins": {
+      "text": "You've won! Your high-risk denial held, and your massive mobilization drive overwhelmed any last-minute controversy.",
+      "isEnding": true,
+      "summary": "A win built on audacity and ground-game. The secret deal with your ally was a necessary evil, and your bold lie at the press conference was a masterclass in political maneuvering. The final, massive get-out-the-vote drive created its own reality, making any potential last-minute revelation from the disgruntled ally irrelevant. You have secured a majority, but it is a victory built on a foundation of deceit. Your relationship with that key ally is now one of mutual blackmail, which will cast a long shadow over your government and its economic policies.",
+      "stats": {
+        "publicApproval": "53%",
+        "economicOutlook": "Held Hostage by Allies",
+        "partyCohesion": "Internal Blackmail",
+        "socialFabric": "Mildly Polarized"
+      }
+    },
+    "end_denial_blackmail": {
+      "text": "You win a tainted victory. The written assurance kept your ally quiet, but you are now politically beholden to him.",
+      "isEnding": true,
+      "summary": "You chose the path of pragmatism to its extreme, securing a victory at the cost of your own political autonomy. The secret deal, the public denial, and the final written assurance were all successful steps in a high-stakes game. The Mahagathbandhan has a majority. However, your ally now holds a powerful weapon against you, and their demands will likely go far beyond the Deputy CM post. Your government is formed under a cloud of blackmail, severely compromising your ability to govern effectively and pursue any meaningful economic agenda. Party cohesion is an illusion, maintained only by the threat of exposure.",
+      "stats": {
+        "publicApproval": "51%",
+        "economicOutlook": "Held Hostage by Allies",
+        "partyCohesion": "Internal Blackmail",
+        "socialFabric": "Deeply Polarized"
+      }
+    },
+    "end_evasion_distraction_win": {
+      "text": "Victory! Your last-minute pivot to the SIR voter roll issue successfully changed the narrative and energized your base.",
+      "isEnding": true,
+      "summary": "This was a triumph of narrative control. Faced with a crisis of alliance unity, you expertly deflected media questions and then executed a brilliant pivot. By reigniting voter anger over the SIR controversy, you reminded your base what the election was truly about and made the internal squabbles seem petty. This final surge of energy from your core supporters was enough to deliver a solid majority. You enter government with a strong mandate on social justice, though the unresolved tensions with your allies remain a potential fault line.",
+      "stats": {
+        "publicApproval": "56%",
+        "economicOutlook": "Populist Strain",
+        "partyCohesion": "Alliance Tensions",
+        "socialFabric": "Deeply Polarized"
+      }
+    },
+    "end_evasion_forced_unity": {
+      "text": "A narrow, unconvincing loss. The forced show of unity in the final days failed to convince voters, and the disunity narrative stuck.",
+      "isEnding": true,
+      "summary": "Your attempts to manage the alliance crisis came too little, too late. Evading direct questions and then staging last-minute, unenthusiastic joint rallies only reinforced the media narrative of a cracked coalition. Voters, fearing an unstable government, swung to the NDA in the final hours. The initial promise of your social justice campaign was squandered by infighting and poor crisis management. The Mahagathbandhan is now in disarray, with allies openly blaming each other for the defeat.",
+      "stats": {
+        "publicApproval": "47%",
+        "economicOutlook": "Status Quo",
+        "partyCohesion": "Alliance in Ruins",
+        "socialFabric": "Mildly Polarized"
+      }
+    },
+    "end_viral_troll_loss": {
+      "text": "A spectacular defeat. The aggressive social media campaign and personal attacks completely backfired, alienating a vast majority of voters.",
+      "isEnding": true,
+      "summary": "Your campaign devolved into a toxic spiral of personal attacks. The initial criticism of Prashant Kishor, the doubling down against the media, the viral confrontation, and the final unleashing of your troll army were all seen as hallmarks of a negative, destructive political style. This alienated not just moderates, but also many within your own base who desired a campaign based on issues. The result is a landslide victory for the NDA. Your leadership is now in serious jeopardy, with a party rebellion almost certain.",
+      "stats": {
+        "publicApproval": "38%",
+        "economicOutlook": "Status Quo",
+        "partyCohesion": "Open Rebellion",
+        "socialFabric": "Extremely Polarized"
+      }
+    },
+    "end_viral_defiance_win": {
+      "text": "A shocking, polarized victory! Your defiant stand against the media turned the election into a crusade that your base rallied behind.",
+      "isEnding": true,
+      "summary": "You turned a media crisis into a populist movement. By branding the media as an enemy and promising to hold them accountable, you tapped into a deep vein of anti-elite sentiment. Your base, feeling under attack, was energized and turned out in unprecedented numbers. While you lost the support of moderates, the sheer intensity of your core vote carried you to a surprising and narrow victory. You have a mandate, but it is one born of anger and division. Governing will be a constant battle, and the state's social fabric is in tatters.",
+      "stats": {
+        "publicApproval": "51%",
+        "economicOutlook": "Uncertain",
+        "partyCohesion": "Iron Grip",
+        "socialFabric": "Extremely Polarized"
+      }
+    },
+    "end_substance_appeal_win": {
+      "text": "A remarkable victory! Your decision to rise above the fray and focus on substance won the hearts and minds of Bihar.",
+      "isEnding": true,
+      "summary": "Your campaign will be remembered for its stunning course correction. After a rocky start with personal attacks, you pivoted to a strategy of moderation and substance. Your calm, fact-based takedown of the biased anchor and your final 'Appeal to Conscience' were turning points. Voters, tired of toxic politics, saw you as a mature leader. This allowed you to win a broad-based majority, attracting support from both your traditional base and crucial undecided moderates. You have a strong mandate for inclusive growth and clean politics.",
+      "stats": {
+        "publicApproval": "62%",
+        "economicOutlook": "Strong Mandate for Growth",
+        "partyCohesion": "United and Loyal",
+        "socialFabric": "Broadly Harmonious"
+      }
+    },
+    "end_substance_targeted_win": {
+      "text": "You've won! The strategy to prove your mettle against a hostile media and then target urban voters with a message of maturity paid off.",
+      "isEnding": true,
+      "summary": "Your campaign demonstrated tactical brilliance. You successfully navigated a hostile media interview not by escalating, but by winning on facts. This built credibility. Your final decision to use this newfound respect to run targeted ads in urban centers was a clinical move that swung a number of key seats in your favor. You have secured a comfortable majority, built on a coalition of your traditional base and new, moderate supporters. Your party is united, and you have a clear mandate for your social justice plus development agenda.",
+      "stats": {
+        "publicApproval": "58%",
+        "economicOutlook": "Positive Growth Signals",
+        "partyCohesion": "United and Loyal",
+        "socialFabric": "Broadly Harmonious"
+      }
+    },
+    "end_reframe_base_win": {
+      "text": "Victory! Your powerful reframing of caste politics and a disciplined ground game have delivered a solid majority.",
+      "isEnding": true,
+      "summary": "You successfully articulated a modern vision for social justice, connecting it to dignity and fair shares rather than just division. This message resonated deeply with your base. The final decision to focus all energy on booth management was crucial, converting that emotional resonance into actual votes. You have won a clear victory by consolidating and energizing your core supporters with a powerful, positive message. Your mandate is for implementing a strong social justice agenda, but the campaign's focus on caste has reinforced existing social fault lines.",
+      "stats": {
+        "publicApproval": "56%",
+        "economicOutlook": "Populist Strain",
+        "partyCohesion": "Iron Grip",
+        "socialFabric": "Deeply Polarized"
+      }
+    },
+    "end_reframe_legacy_win": {
+      "text": "A massive victory! The combination of your modern message and your father's legacy proved to be an unbeatable combination.",
+      "isEnding": true,
+      "summary": "Your campaign was a perfect synthesis of the old and the new. You eloquently reframed social justice for a modern audience, while the final WhatsApp message from Lalu Prasad Yadav mobilized the party's traditional base with unparalleled emotional force. This two-pronged attack completely overwhelmed the NDA, leading to a landslide victory. You have an enormous mandate for change, backed by a completely united party and a galvanized support base. The challenge will be to meet the massive expectations your powerful campaign has created.",
+      "stats": {
+        "publicApproval": "65%",
+        "economicOutlook": "High Expectations, Populist Pressure",
+        "partyCohesion": "Iron Grip",
+        "socialFabric": "Mildly Polarized"
+      }
+    },
+    "end_bridge_intellectual_win": {
+      "text": "A historic victory. Your vision of linking social and economic progress has created a new consensus for Bihar's future.",
+      "isEnding": true,
+      "summary": "You have not just won an election; you have won an argument. By consistently and intelligently linking social justice with economic development, you built a broad and powerful coalition of voters. The final endorsement from academics and economists gave your platform an unparalleled level of credibility, winning over skeptical urban voters without alienating your base. The result is a massive majority and a historic mandate to implement your visionary agenda. Your party is united, and the social atmosphere is optimistic and harmonious.",
+      "stats": {
+        "publicApproval": "67%",
+        "economicOutlook": "Strong Mandate for Growth",
+        "partyCohesion": "United and Loyal",
+        "socialFabric": "Broadly Harmonious"
+      }
+    },
+    "end_bridge_digital_win": {
+      "text": "A clear win! Your smart and targeted digital campaign successfully communicated your complex message to the right people.",
+      "isEnding": true,
+      "summary": "Your campaign demonstrated a sophisticated understanding of modern politics. The core message—that a caste census would lead to better-targeted development—was complex, but your final digital ad campaign communicated it brilliantly. This won over aspirational voters from backward communities who want both dignity and development. The result is a clear and comfortable majority. You have a mandate to implement your 'social justice through development' model, and your successful, issue-based campaign has left the state's social fabric in a healthy state.",
+      "stats": {
+        "publicApproval": "60%",
+        "economicOutlook": "Positive Growth Signals",
+        "partyCohesion": "United and Loyal",
+        "socialFabric": "Broadly Harmonious"
+      }
+    },
+    "end_business_win_no_left": {
+      "text": "A narrow, chaotic victory. You've won the support of the business community and urban centers, but your traditional alliance is in tatters.",
+      "isEnding": true,
+      "summary": "Your pragmatic pivot towards a pro-business agenda was a high-risk gamble that barely paid off. You won several key urban seats with the support of traders and the middle class, just enough to secure a razor-thin majority. However, your Left allies, feeling betrayed, actively campaigned against you, and your traditional rural base was unenthusiastic. You are now the Chief Minister of a government with a narrow, unstable mandate and a broken coalition. Your economic outlook is positive, but your political foundation is extremely weak.",
+      "stats": {
+        "publicApproval": "51%",
+        "economicOutlook": "Positive Growth Signals",
+        "partyCohesion": "Alliance in Ruins",
+        "socialFabric": "Urban-Rural Divide"
+      }
+    },
+    "end_business_reconcile_loss": {
+      "text": "Defeated. Your attempt to be everything to everyone left you with nothing. Your message was muddled, and voters were confused.",
+      "isEnding": true,
+      "summary": "Your campaign was caught between two stools. The attempt to woo the business community alienated your Leftist allies, while your last-minute attempt to reconcile made you look weak and inconsistent to the urban voters you were courting. The result was a confused message that failed to excite anyone. Your base was lukewarm, and the new voters you targeted stuck with the NDA. The Mahagathbandhan has lost, and the blame is being placed on your inconsistent and muddled strategy. The party is now deeply divided on its future ideological direction.",
+      "stats": {
+        "publicApproval": "45%",
+        "economicOutlook": "Status Quo",
+        "partyCohesion": "Ideological Rift",
+        "socialFabric": "Broadly Harmonious"
+      }
+    },
+    "end_inclusive_testimonial_win": {
+      "text": "A wonderful victory for a united Bihar! Your inclusive message, amplified by the voices of ordinary people, has won you a strong mandate.",
+      "isEnding": true,
+      "summary": "Your campaign was a triumph of positive, inclusive messaging. By rejecting radical populism and instead focusing on how empowering the poor benefits everyone, you built a broad coalition of support. The final video testimonials were a masterstroke, making your economic message personal and relatable. You have won a strong majority with support from a diverse range of social groups. You have a clear mandate for inclusive economic growth, and your positive campaign has created a harmonious social atmosphere.",
+      "stats": {
+        "publicApproval": "61%",
+        "economicOutlook": "Strong Mandate for Growth",
+        "partyCohesion": "Strong Alliance",
+        "socialFabric": "Broadly Harmonious"
+      }
+    },
+    "end_inclusive_unity_win": {
+      "text": "You've won! The final, symbolic get-out-the-vote drive perfectly captured your campaign's message of unity and shared progress.",
+      "isEnding": true,
+      "summary": "Your campaign's strength was its consistency and authenticity. The message of inclusive growth was powerfully reinforced by your final GOTV drive, which saw volunteers from all communities working together. This resonated with voters tired of divisive politics. You have secured a comfortable majority, not through populist promises or attacks, but through a steady, positive vision. Your government begins with a deep well of public goodwill and a united coalition, creating an ideal environment for stable governance.",
+      "stats": {
+        "publicApproval": "59%",
+        "economicOutlook": "Positive Growth Signals",
+        "partyCohesion": "Strong Alliance",
+        "socialFabric": "Broadly Harmonious"
+      }
+    },
+    "end_populist_wave_win": {
+      "text": "A populist landslide! Your audacious promises of an unemployment allowance and a farm loan waiver have brought you to power with a massive majority.",
+      "isEnding": true,
+      "summary": "You rode a populist wave to a stunning victory. By embracing the Left's radical promises and adding your own, you created an irresistible offer for a vast majority of voters. The criticism from economists was drowned out by the roar of public approval. Your final push on the loan waiver sealed the deal, leading to a landslide. You have an enormous mandate and a united party. However, you now face the monumental task of implementing fiscally challenging promises. The economic outlook is under severe strain from day one.",
+      "stats": {
+        "publicApproval": "68%",
+        "economicOutlook": "Populist Strain",
+        "partyCohesion": "Iron Grip",
+        "socialFabric": "Mildly Polarized"
+      }
+    },
+    "end_populist_defense_win": {
+      "text": "A convincing victory! You not only made popular promises but also successfully defended them, earning the trust of the electorate.",
+      "isEnding": true,
+      "summary": "Your campaign combined populist appeal with a veneer of credibility. By embracing popular schemes like the unemployment allowance and then confidently defending them against criticism, you persuaded voters that you were both caring and capable. The final press conference, where you framed the debate as 'people vs. profits,' was particularly effective. This strategy has delivered a convincing majority and a strong mandate to implement your welfare-focused agenda. The party is united, but the state's finances will be under immediate and immense pressure.",
+      "stats": {
+        "publicApproval": "62%",
+        "economicOutlook": "High Expectations, Populist Pressure",
+        "partyCohesion": "United and Loyal",
+        "socialFabric": "Broadly Harmonious"
+      }
+    },
+    "end_implementation_roadmap_win": {
+      "text": "A victory for planning! Your credible and detailed roadmap convinced voters that your promises were more than just words.",
+      "isEnding": true,
+      "summary": "You won this election by being the most credible candidate. While your campaign embraced populist ideas, your unique focus on implementation set you apart. The final release of the 'First 100 Days Roadmap' was a masterstroke, appealing to voters' hopes while also satisfying their need for a concrete plan. This approach secured a solid majority, bringing in skeptical moderates without alienating your energized base. You have a mandate to govern effectively and a united party ready to implement your well-thought-out agenda.",
+      "stats": {
+        "publicApproval": "59%",
+        "economicOutlook": "Positive Growth Signals",
+        "partyCohesion": "United and Loyal",
+        "socialFabric": "Broadly Harmonious"
+      }
+    },
+    "end_implementation_appeal_win": {
+      "text": "You have won! Your final, direct appeal to voters, emphasizing your commitment to a concrete plan, sealed the deal.",
+      "isEnding": true,
+      "summary": "Your campaign's closing argument was its strongest. After weeks of populist promises from all sides, your final, calm video message cut through the noise. By positioning yourself as the leader with a workable plan, you won the trust of a majority of voters. This strategy of combining ambitious goals with credible implementation plans has given you a comfortable victory and a mandate for responsible governance. The party is united, and the economic outlook is positive, based on the perceived feasibility of your promises.",
+      "stats": {
+        "publicApproval": "57%",
+        "economicOutlook": "Strong Mandate for Growth",
+        "partyCohesion": "United and Loyal",
+        "socialFabric": "Broadly Harmonious"
+      }
+    }
+  }
+}
