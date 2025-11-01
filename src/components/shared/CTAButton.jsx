@@ -40,7 +40,7 @@ const CTAButton = ({
     if (onClick) {
       setTimeout(() => {
         onClick(e)
-      }, 400)
+      }, 450)
     }
   }
 

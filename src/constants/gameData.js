@@ -1,4 +1,5 @@
 export const JSON_BASE_URL = 'https://testingtoi-simulationroom.vercel.app/json'
+export const HTML_BASE_URL = 'https://testingtoi-simulationroom.vercel.app/html'
 
 export const GAME_DATA_CONFIG = {
   nitish: { 

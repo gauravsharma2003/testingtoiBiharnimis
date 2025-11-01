@@ -152,6 +152,7 @@ const CandidateGame = () => {
     return (
       <ResultScreen 
         nodeData={currentNodeData}
+        nodeId={currentNode}
         candidateKey={candidateKey}
         choiceHistory={choiceHistory}
         elapsedTime={elapsedTime}
