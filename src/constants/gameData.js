@@ -11,16 +11,7 @@ export const GAME_DATA_CONFIG = {
     listingimage : "https://static.toiimg.com/photo/124996581.cms",
     partyname: "NDA"
   },
-  prashant: { 
-    name: "Prashant Kishor",
-    fullName: "Prashant Kishor from Jan Suraaj",
-    image: "https://pnglove.com/data/img/1142_pMyO.jpg",
-    subhead: "Political Strategist",
-    url: `${JSON_BASE_URL}/prashant.json`,
-    splashimage: "https://static.toiimg.com/photo/124993250.cms",
-    listingimage : "https://static.toiimg.com/photo/124996580.cms",
-    partyname: "Jan Suraaj"
-  },
+ 
   tejashwi: { 
     name: "Tejashwi Yadav",
     fullName: "Tejashwi Yadav from Rashtriya Janata Dal",
@@ -30,6 +21,16 @@ export const GAME_DATA_CONFIG = {
     splashimage: "https://static.toiimg.com/photo/124993243.cms",
     listingimage : "https://static.toiimg.com/photo/124996579.cms",
     partyname: "Mahagathbandhan"
+  },
+  prashant: { 
+    name: "Prashant Kishor",
+    fullName: "Prashant Kishor from Jan Suraaj",
+    image: "https://pnglove.com/data/img/1142_pMyO.jpg",
+    subhead: "Political Strategist",
+    url: `${JSON_BASE_URL}/prashant.json`,
+    splashimage: "https://static.toiimg.com/photo/124993250.cms",
+    listingimage : "https://static.toiimg.com/photo/124996580.cms",
+    partyname: "Jan Suraaj"
   }
 }
 
