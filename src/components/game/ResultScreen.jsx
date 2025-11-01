@@ -38,7 +38,8 @@ const ResultScreen = ({
       const endNodeId = nodeId || "default";
 
       // Construct the share URL pointing to the OG-tagged HTML file
-      const shareUrl = `${HTML_BASE_URL}/${endNodeId}.html`;
+      // Include candidate folder: baseUrl/candidateName/endNodeId.html
+      const shareUrl = `${HTML_BASE_URL}/${candidateKey.toLowerCase()}/${endNodeId}.html`;
 
       // Check if the HTML file exists before attempting to share
       const htmlFileExists = await fetch(shareUrl, { method: "HEAD" })
