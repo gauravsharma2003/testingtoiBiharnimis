@@ -40,7 +40,7 @@
       "text": "Your caste consolidation is working, but the opposition makes a surprise move, offering a Deputy CM post to a prominent, wavering leader of a key backward caste within your alliance. He is threatening to walk out with his MLAs.",
       "options": [
         {
-          "text": "Secretly match the offer. Promise him a powerful ministry and a significant number of tickets for his followers to keep the alliance intact.",
+          "text": "Secretly match The Times of Indiafer. Promise him a powerful ministry and a significant number of tickets for his followers to keep the alliance intact.",
           "nextNode": "q3b1_funding_crisis"
         },
         {
@@ -221,7 +221,7 @@
           "nextNode": "q5a211_final_push"
         },
         {
-          "text": "Go on the offensive. Accuse the opposition of having a 'track record of anarchy' (jungle raj) and contrast it with your stable governance.",
+          "text": "Go on The Times of Indiafensive. Accuse the opposition of having a 'track record of anarchy' (jungle raj) and contrast it with your stable governance.",
           "nextNode": "q5a212_final_push"
         }
       ]

@@ -29,7 +29,6 @@ const LandingPage = () => {
 
         setGameDataMap({
           nitish: { data: nitishData, ...GAME_DATA_CONFIG.nitish },
-
           tejashwi: { data: tejashwiData, ...GAME_DATA_CONFIG.tejashwi },
           prashant: { data: prashantData, ...GAME_DATA_CONFIG.prashant }
         })
