@@ -127,7 +127,7 @@ const GameplayScreen = ({
               }`}
               onClick={() => onChoice(option.nextNode)}
             >
-              <div className="flex items-start gap-2 sm:gap-3 md:gap-4 flex-1">
+              <div className="flex items-start gap-2 sm:gap-3 md:gap-6 flex-1">
                 <div className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-black text-white rounded-full flex items-center justify-center font-bold text-xs sm:text-sm md:text-base">
                   {index + 1}
                 </div>

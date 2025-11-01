@@ -4,7 +4,10 @@ import CTAButton from './CTAButton'
 
 const CandidateCard = ({ candidateKey, gameInfo, onSelect }) => {
   return (
-    <div className="bg-white w-full max-w-xs mx-auto sm:w-full sm:max-w-none sm:mx-0">
+    <div 
+      className="bg-white w-full max-w-xs mx-auto sm:w-full sm:max-w-none sm:mx-0 cursor-pointer transition-transform hover:scale-105"
+      onClick={() => onSelect(candidateKey, gameInfo.fullName)}
+    >
       {/* Image at the top */}
       <div className="w-full h-48 rounded-t-xl overflow-hidden">
         <img 

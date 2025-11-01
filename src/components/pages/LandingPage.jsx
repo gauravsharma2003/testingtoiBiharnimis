@@ -65,7 +65,7 @@ const LandingPage = () => {
             <h2 className="text-sm sm:text-base md:text-xl lg:text-2xl text-gray-600 mb-4 sm:mb-5 md:mb-6 px-2 sm:px-4">Choose Your Perspective: Explore Bihar's campaign through concise, distinct viewpoints.</h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 md:gap-6">
             {Object.entries(gameDataMap).map(([key, gameInfo]) => (
               <CandidateCard 
                 key={key}

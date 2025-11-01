@@ -45,10 +45,10 @@ const CTAButton = ({
   }
 
   return (
-    <div className={`relative ${className}`} style={{ paddingRight: '10px', paddingBottom: '10px' }}>
+    <div className={`relative ${className}`} style={{ paddingRight: '10px', paddingBottom: '10px', paddingLeft: '6px', paddingTop: '6px' }}>
       <div
         aria-hidden
-        className={`absolute top-0 left-0 right-3 bottom-3 rounded-xl ${variantStyles.shadow} ${variantStyles.border}`}
+        className={`absolute top-1.5 left-1.5 right-3 bottom-3 rounded-xl ${variantStyles.shadow} ${variantStyles.border}`}
         style={{ 
           transform: "translate(6px, 6px)",
           transition: "none"
